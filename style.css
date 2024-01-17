@@ -1,0 +1,199 @@
+/* -------------------------------------------------------------------------------------------------- */
+/* Header */ 
+header {
+    background: url(../img/logo.png) fixed;
+    background-color: #5b5963;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding: 0;
+    position: relative;
+    background-size: cover;
+    height: 770px;
+}
+
+header > div{
+    position: relative;
+    top: 300px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 100px;
+}
+
+header > div > strong > div{
+    color: aliceblue;
+    font-size: 30px;
+}
+
+#etu {
+    padding-top: 10px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Présentation */
+div > p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+#pres {
+    width: 800px;
+    margin: 80px auto auto auto;
+    padding-bottom: 60px;
+}
+
+.contain {
+    position: relative;
+    height: 175px;
+    width: 800px;
+    margin: 35px auto 0px auto;
+    padding-top: 40px;
+    left: 33px;
+}
+.h2pres {
+    position: relative;
+    top: 44%;
+    left: 274px;
+    font-size: 46px;
+}
+.qui {
+    position: absolute;
+    opacity: 0.05;
+    font-size: 150px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+.h2pres2 {
+    position: relative;
+    top: 44%;
+    left: 300px;
+    font-size: 46px;
+}
+.contain2{
+    position: relative;
+    height: 175px;
+    width: 800px;
+    margin: 0px auto 0px auto;
+    padding-top: 60px;
+    left: 33px;
+}
+.parc {
+    position: absolute;
+    opacity: 0.05;
+    font-size: 150px; 
+}
+/* -------------------------------------------------------------------------------------------------- */
+.contain3{
+    position: relative;
+    height: 175px;
+    width: 800px;
+    padding-top: 60px;
+    margin: 0px auto 0px auto;
+    left: 129px;
+}
+
+.act {
+    position: absolute;
+    opacity: 0.05;
+    font-size: 150px; 
+}
+
+.h2pres3 {
+    position: relative;
+    top: 44%;
+    left: 190px;
+    font-size: 46px;
+}
+
+.h2pres4 {
+    position: relative;
+    top: 44%;
+    left: 242px;
+    font-size: 46px;
+}
+
+.pair{
+    background-color: #f3f3f3;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Général */ 
+body {
+    min-width: 500px;
+}
+
+* {
+    margin: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Menu de navigation */
+.divnav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background: hsl(213, 97%, 15%);
+}
+
+nav{
+	width: 100%;
+	font-size: 18px;
+    text-transform: uppercase;
+}
+
+.menu {
+    bottom: 15px;
+    position: relative;
+    height: 60px;
+    list-style: none;
+    padding: 10px;
+    margin: 40px;
+
+}
+
+.menu li {
+    float: left;
+    width: 200px;
+}
+
+.menu li a:link, .menu li a:visited {
+    display: block;
+    color: #FFF;
+    background: #01234c;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu .sousmenu {
+    list-style-type: none;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu .sousmenu li {
+    float: none;
+}
+
+.menu li a:active {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #808080;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+.menu .sousmenu li a:hover, .menu li a:hover  {
+    background-color: rgb(177, 237, 238);
+    color: black;
+    transition: 0.5s;
+}
+
+.menu li:hover .sousmenu {
+    display: block;
+}
+
+
+
