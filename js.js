@@ -1,3 +1,4 @@
+
 function estVisible(id_element){
 	var cadreVisible = {yMin: 0, yMax: 0}, elementVisible = {yMin: 0, yMax: 0};
 	var source = document.getElementById(id_element), sourceParent = source.offsetParent;
@@ -16,6 +17,7 @@ function estVisible(id_element){
 	else if(!(cadreVisible.yMax < elementVisible.yMin || cadreVisible.yMin > elementVisible.yMax)){
 		partiel.hauteur = true;
 	}
+
 	if(partiel.hauteur){
 		navbar.classList.add('fixed');
 	}
@@ -23,10 +25,16 @@ function estVisible(id_element){
 		navbar.classList.remove('fixed');
 	}
 }
+
 window.addEventListener("scroll", () => {
-	estVisible("nav");
+	if(window.pageYOffset >= 400) {
+        estVisible("nav");
+    }
 });
+
 window.addEventListener("resize", () => {
 	navbarHeight = navbar.offsetHeight;
 	estVisible("nav");
 });
+
+
