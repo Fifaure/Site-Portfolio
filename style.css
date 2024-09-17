@@ -3,7 +3,7 @@
 /* Header */ 
 
 header {
-    background: url(logo.png) fixed;
+    background: url(../img/fond.png) fixed;
     background-color: #5b5963;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -41,6 +41,12 @@ header > div > strong > div{
     text-decoration: none;
     color: black;
 }
+
+.aS{
+  text-decoration: none;
+  color: #1d597c;
+}
+
 
 
 /* -------------------------------------------------------------------------------------------------- */ 
