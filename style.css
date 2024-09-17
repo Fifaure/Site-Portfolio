@@ -300,14 +300,14 @@ body {
 
 .na{
     height: 100px;
-    background: hsl(213, 97%, 15%);
+    background: #100e35;
 }
 
 .divnav{
     width: 100%;
     height: 100px;
     display: flex;
-    background: hsl(213, 97%, 15%);
+    background: #100e35;
 }
 
 nav{
@@ -334,7 +334,7 @@ nav{
 .menu li a:link, .menu li a:visited {
     display: block;
     color: #FFF;
-    background: #01234c;
+    background: #100e35;
     padding: 6px 10px;
     text-align: center;
     text-decoration: none;
