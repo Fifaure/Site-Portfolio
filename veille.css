@@ -1,0 +1,73 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Conteneur de cartes */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style individuel d'une carte */
+/* Mise à jour de la classe .card */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    display: flex;
+    flex-direction: column; /* Organise le contenu verticalement */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 15px;
+    flex-grow: 1; /* Pour permettre à la description de prendre de l'espace */
+}
+
+.card-btn {
+    margin-top: auto; /* Pousse le bouton vers le bas */
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #0056b3;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-title {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+/* Effet au survol */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}

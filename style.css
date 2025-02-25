@@ -1,0 +1,212 @@
+/* -------------------------------------------------------------------------------------------------- */
+/* Général */ 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+    min-width: 500px;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Header */ 
+
+header {
+    background: url(Logo.png) fixed;
+    background-color: #5b5963;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    background-size: cover;
+    height: 700px;
+}
+
+header > div{
+    position: relative;
+    top: 250px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 100px;
+}
+
+header > div > strong > div{
+    color: aliceblue;
+    font-size: 30px;
+}
+
+#etu {
+    padding-top: 10px;
+}
+
+.outline-text {
+    text-shadow: 
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000, 
+    1px 1px 0 #000;
+}
+
+.a{
+    text-decoration: none;
+    color: black;
+}
+
+.a:hover{
+    text-decoration: none;
+    color: #1d597c;
+}
+
+.aS{
+  text-decoration: none;
+  color: #1d597c;
+}
+
+.transition {
+    height: 50px;
+    position: relative;
+    background-color: #100e35;
+    
+}
+
+.aS {
+  text-decoration: none;
+  color: white;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Présentation */
+div > p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+#paragraphe {
+    width: 800px;
+}
+
+#pres {
+    display: flex;
+    justify-content: center;
+    margin: 80px auto auto auto;
+    padding-bottom: 60px;
+}
+
+.contain {
+  position: relative;
+  height: 175px;
+  padding-top: 60px;
+}
+.h2pres {
+  position: relative;
+  top: 44%;
+  font-size: 46px;
+  text-align: center;
+}
+.qui {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0.05;
+  font-size: 150px;
+  text-align: center;
+}
+/* -------------------------------------------------------------------------------------------------- */
+.h2pres2 {
+  position: relative;
+  top: 44%;
+  font-size: 46px;
+  text-align: center;
+}
+.contain2{
+  position: relative;
+  height: 175px;
+  padding-top: 60px;
+}
+.parc {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0.05;
+  font-size: 150px;
+  text-align: center;
+}
+/* -------------------------------------------------------------------------------------------------- */
+.contain3{
+  position: relative;
+  height: 175px;
+  padding-top: 60px;
+}
+
+.act {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0.05;
+  font-size: 150px;
+  text-align: center;
+}
+
+.h2pres3 {
+  position: relative;
+  top: 44%;
+  font-size: 46px;
+  text-align: center;
+}
+
+.h2pres4 {
+  position: relative;
+  top: 44%;
+  font-size: 46px;
+  text-align: center;
+}
+
+.pair{
+    background-color: #f3f3f3;
+}
+
+
+
+/* Table */ 
+.veille {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.veille p {
+    padding-bottom: 30px;
+}
+
+table.aBorder, table.aBorder th, table.aBorder td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+table.sBorder {
+    border: none;
+}
+
+#td1 {
+    text-align: center;
+}
+table.sBorder td {
+    border: none;
+}
+
+table.sBorder th, table.sBorder td {
+    padding: 20px 40px 0px 40px;
+    font-size: 25px;
+}
+
+.aBorder {
+  margin-bottom: 50px;
+}
