@@ -1,3 +1,100 @@
+/* -------------------------------------------------------------------------------------------------- */
+/* Général */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Header */
+
+header {
+  background: url(Logo.png) fixed;
+  background-color: #5b5963;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
+}
+
+header > div {
+  text-align: center;
+  color: aliceblue;
+  font-size: 100px;
+  height: 100vh;
+}
+
+header > div > strong {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1245px) {
+  header > div {
+    top: 170px;
+  }
+  
+}
+
+header > div > strong > div {
+  color: aliceblue;
+  font-size: 30px;
+}
+.mainTitle {
+  font-size: 100px;
+}
+
+@media (max-width: 800px) {
+  .mainTitle {
+    font-size: 50px;
+  }
+
+  header > div {
+    top: 255px;
+  }
+}
+
+@media (max-width: 625px) {
+  header > div {
+    top: 230px;
+  }
+}
+
+.a {
+  text-decoration: none;
+  color: black;
+}
+
+.a:hover {
+  text-decoration: none;
+  color: #1d597c;
+}
+
+.aS {
+  text-decoration: none;
+  color: #1d597c;
+}
+
+.transition {
+  height: 50px;
+  position: relative;
+  background-color: #100e35;
+}
+
+.aS {
+  text-decoration: none;
+  color: white;
+}
+
 /* Style global */
 body {
     font-family: Arial, sans-serif;

@@ -1,75 +1,93 @@
 /* -------------------------------------------------------------------------------------------------- */
-/* Général */ 
+/* Général */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 body {
-    min-width: 500px;
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* -------------------------------------------------------------------------------------------------- */
-/* Header */ 
+/* Header */
 
 header {
-    background: url(Logo.png) fixed;
-    background-color: #5b5963;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    position: relative;
-    background-size: cover;
-    height: 700px;
+  background: url(Logo.png) fixed;
+  background-color: #5b5963;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  background-size: cover;
+  height: 100vh;
 }
 
-header > div{
-    position: relative;
-    top: 250px;
-    text-align: center;
-    color: aliceblue;
-    font-size: 100px;
+header > div {
+  text-align: center;
+  color: aliceblue;
+  font-size: 100px;
+  height: 100vh;
 }
 
-header > div > strong > div{
-    color: aliceblue;
-    font-size: 30px;
+header > div > strong {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-#etu {
-    padding-top: 10px;
+@media (max-width: 1245px) {
+  header > div {
+    top: 170px;
+  }
+  
 }
 
-.outline-text {
-    text-shadow: 
-    -1px -1px 0 #000, 
-    1px -1px 0 #000, 
-    -1px 1px 0 #000, 
-    1px 1px 0 #000;
+header > div > strong > div {
+  color: aliceblue;
+  font-size: 30px;
+}
+.mainTitle {
+  font-size: 100px;
 }
 
-.a{
-    text-decoration: none;
-    color: black;
+@media (max-width: 800px) {
+  .mainTitle {
+    font-size: 50px;
+  }
+
+  header > div {
+    top: 255px;
+  }
 }
 
-.a:hover{
-    text-decoration: none;
-    color: #1d597c;
+@media (max-width: 625px) {
+  header > div {
+    top: 230px;
+  }
 }
 
-.aS{
+.a {
+  text-decoration: none;
+  color: black;
+}
+
+.a:hover {
+  text-decoration: none;
+  color: #1d597c;
+}
+
+.aS {
   text-decoration: none;
   color: #1d597c;
 }
 
 .transition {
-    height: 50px;
-    position: relative;
-    background-color: #100e35;
-    
+  height: 50px;
+  position: relative;
+  background-color: #100e35;
 }
 
 .aS {
@@ -79,20 +97,20 @@ header > div > strong > div{
 
 /* -------------------------------------------------------------------------------------------------- */
 /* Présentation */
-div > p{
-    font-size: 25px;
-    text-align: justify;
+div > p {
+  font-size: 25px;
+  text-align: justify;
 }
 
 #paragraphe {
-    width: 800px;
+  width: 800px;
 }
 
 #pres {
-    display: flex;
-    justify-content: center;
-    margin: 80px auto auto auto;
-    padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  margin: 60px auto auto auto;
+  padding-bottom: 60px;
 }
 
 .contain {
@@ -100,6 +118,7 @@ div > p{
   height: 175px;
   padding-top: 60px;
 }
+
 .h2pres {
   position: relative;
   top: 44%;
@@ -114,6 +133,52 @@ div > p{
   font-size: 150px;
   text-align: center;
 }
+
+@media (max-width: 900px) {
+  .h2pres {
+    font-size: 31px;
+  }
+  .qui {
+    font-size: 100px;
+  }
+  .contain {
+    position: relative;
+    height: 115px;
+    padding-top: 60px;
+  }
+  #pres {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .h2pres {
+    font-size: 23px;
+  }
+  .qui {
+    font-size: 75px;
+  }
+  .contain {
+    position: relative;
+    height: 90px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+  .h2pres {
+    font-size: 20px;
+  }
+  .qui {
+    font-size: 50px;
+  }
+  .contain {
+    position: relative;
+    height: 50px;
+    padding-top: 60px;
+  }
+}
+
 /* -------------------------------------------------------------------------------------------------- */
 .h2pres2 {
   position: relative;
@@ -121,7 +186,7 @@ div > p{
   font-size: 46px;
   text-align: center;
 }
-.contain2{
+.contain2 {
   position: relative;
   height: 175px;
   padding-top: 60px;
@@ -134,8 +199,50 @@ div > p{
   font-size: 150px;
   text-align: center;
 }
+
+@media (max-width: 900px) {
+  .h2pres2 {
+    font-size: 31px;
+  }
+  .parc {
+    font-size: 100px;
+  }
+  .contain2 {
+    position: relative;
+    height: 115px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .h2pres2 {
+    font-size: 23px;
+  }
+  .parc {
+    font-size: 75px;
+  }
+  .contain2 {
+    position: relative;
+    height: 90px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+  .h2pres2 {
+    font-size: 20px;
+  }
+  .parc {
+    font-size: 50px;
+  }
+  .contain2 {
+    position: relative;
+    height: 50px;
+    padding-top: 60px;
+  }
+}
 /* -------------------------------------------------------------------------------------------------- */
-.contain3{
+.contain3 {
   position: relative;
   height: 175px;
   padding-top: 60px;
@@ -164,49 +271,200 @@ div > p{
   text-align: center;
 }
 
-.pair{
-    background-color: #f3f3f3;
+.pair {
+  background-color: #f3f3f3;
+}
+
+@media (max-width: 900px) {
+  .h2pres3 {
+    font-size: 31px;
+  }
+
+  .act {
+    font-size: 100px;
+  }
+  .contain3 {
+    position: relative;
+    height: 115px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .h2pres3 {
+    font-size: 23px;
+  }
+  .act {
+    font-size: 75px;
+  }
+  .contain3 {
+    position: relative;
+    height: 90px;
+    padding-top: 60px;
+  }
 }
 
 
 
-/* Table */ 
-.veille {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.veille p {
-    padding-bottom: 30px;
-}
-
-table.aBorder, table.aBorder th, table.aBorder td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
+/* Table */
 th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 table.sBorder {
-    border: none;
+  border: none;
 }
 
 #td1 {
-    text-align: center;
+  text-align: center;
 }
 table.sBorder td {
-    border: none;
+  border: none;
 }
 
-table.sBorder th, table.sBorder td {
-    padding: 20px 40px 0px 40px;
-    font-size: 25px;
+table.sBorder th,
+table.sBorder td {
+  padding: 20px 40px 0px 40px;
+  font-size: 25px;
+}
+
+@media (max-width: 600px) {
+  table.sBorder th,
+  table.sBorder td {
+    padding: 10px;
+    font-size: 20px;
+  }
 }
 
 .aBorder {
   margin-bottom: 50px;
+}
+
+
+/* Conteneur de cartes */
+.card-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  gap: 20px;
+}
+
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  .card-container .card:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 700px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-container .card:last-child:nth-child(odd) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    padding-top: 0px;
+    
+  }
+}
+
+@media (min-width: 451px) {
+  .card {
+    padding-top: 20px;
+    
+  }
+}
+
+
+/* Style individuel d'une carte */
+/* Mise à jour de la classe .card */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Organise le contenu verticalement */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-description {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 15px;
+  flex-grow: 1; /* Pour permettre à la description de prendre de l'espace */
+  text-align: center;
+}
+
+.ActivityCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.ActivityCard button:last-child:nth-child(odd) {
+  grid-column: span 2;
+}
+
+
+.actifityButton {
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actifityButton:hover {
+  background-color: #0056b3;
+}
+
+.card-btn {
+  margin-top: auto; /* Pousse le bouton vers le bas */
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #0056b3;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-title {
+  margin-bottom:  10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+
+/* Effet au survol */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }

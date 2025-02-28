@@ -2,10 +2,10 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="navbar.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="navbar.css" />
   <title>Portfolio Mory Camille</title>
 </head>
 
@@ -13,13 +13,14 @@
   <header>
     <div>
       <strong class="outline-text">
-        <div>Bonjour,</div>
-        Je m'appelle Camille Mory
-        <div id="etu">Étudiant en BTS SIO</div>
+        <div>
+          Bonjour,
+          <div class="mainTitle">Je m'appelle Camille Mory</div>
+          Étudiant en BTS SIO
+        </div>
       </strong>
     </div>
   </header>
-  <div class="transition"></div>
   <nav>
     <div class="navbar" id="nav">
       <div class="container nav-container">
@@ -33,88 +34,144 @@
           <li><a href="#qui">Qui-suis-je?</a></li>
           <li><a href="#parc">Parcours</a></li>
           <li><a href="#act">Réalisation</a></li>
+          <li><a href="Stage.html">Rapport de Stage</a></li>
           <li><a href="veille.html">Veille</a></li>
           <li><a href="CV_Camille.pdf" target="_blank">Mon CV</a></li>
-          <li><a href="Stage.html">Rapport de Stage</a></li>
         </div>
       </div>
     </div>
   </nav>
-  
+
   <div id="qui">
-    <br>
     <div class="contain">
       <div class="qui">Présentation</div>
       <div class="h2pres">Qui-suis-je?</div>
     </div>
     <div id="pres">
       <p id="paragraphe">
-        Étant passionné dans le domaine du développement et de l'informatique en général
-        depuis mon plus jeune âge, je suis actuellement étudiant en BTS SIO à GAP.
-        J'apprends les bases de tous types de langages de programmation avec enthousiasme.
-        <br><br>
-        J'ai réalisé quelques projets en dehors des cours qui m'ont permis de voir la programmation
-        sous un autre angle.
+        Étant passionné dans le domaine du développement et de l'informatique
+        en général depuis mon plus jeune âge, je suis actuellement étudiant en
+        BTS SIO à GAP. J'apprends les bases de tous types de langages de
+        programmation avec enthousiasme.
+        <br /><br />
+        J'ai réalisé quelques projets en dehors des cours qui m'ont permis de
+        voir la programmation sous un autre angle.
       </p>
     </div>
   </div>
   <div id="parc" class="pair">
-    <br>
+    <br />
     <div class="contain2">
       <div class="parc">Présentation</div>
       <div class="h2pres2">Parcours</div>
     </div>
+
     <div id="pres">
-      <table class="sBorder">
-        <tr>
-          <td id="td1"><b>Baccalauréat 2023</b></td>
-          <td id="td1"><b><a href="Pix.pdf" target="_blank" class="a">PIX 2024</a></b></td>
-          <td id="td1"><b>Brevet 2020</b></td>
-        </tr>
-        <tr>
-          <td>
-            Lycée Saint-Joseph GAP<br>
-            Spécialités : Maths, NSI<br>
-            Mention : Assez Bien
-          </td>
-          <td><a href="Pix.pdf" target="_blank" class="a">605 points</a></td>
-          <td>
-            Collège Saint-Joseph GAP<br>
-            Mention : Assez Bien
-          </td>
-        </tr>
-      </table>
+      <div class="card-container">
+        <div class="card">
+          <img src="Bac.png" alt="Image 1" />
+          <h3 class="card-title">Baccalauréat 2023</h3>
+          <p class="card-description">
+            <b>Lycée Saint-Joseph GAP</b><br />
+            <b>Spécialités</b> : Maths, NSI<br />
+            <b>Mention</b> : Assez Bien
+          </p>
+          <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-5-3-is-now-available" class="aS"><button
+              class="card-btn">Voir Plus</button></a>
+        </div>
+        <div class="card">
+          <img src="Pix.png" alt="Image 1" />
+          <h3 class="card-title">PIX 2024</h3>
+          <p class="card-description">
+            <b>Certification :</b> 605 points<br />
+          </p>
+          <a href="Pix.pdf" class="aS"><button class="card-btn">Voir Plus</button></a>
+        </div>
+        <div class="card">
+          <img src="Brevet.png" alt="Image 1" />
+          <h3 class="card-title">Brevet 2020</h3>
+          <p class="card-description">
+            <b>Collège Saint-Joseph GAP</b><br />
+            <b>Mention</b> : Assez Bien
+          </p>
+          <a href="" class="aS"><button class="card-btn">Voir Plus</button></a>
+        </div>
+      </div>
     </div>
   </div>
   <div id="act">
-    <br>
+    <br />
     <div class="contain3">
       <div class="act">Activités</div>
       <div class="h2pres3">Réalisation</div>
     </div>
     <div id="pres">
-      <table class="sBorder">
-        <tr>
-          <td id="td1"><b>Python</b></td>
-          <td id="td1"><b>Web</b></td>
-          <td id="td1"><b>java</b></td>
-        </tr>
-        <tr>
-          <td>
-            -Bot Dofus Farm<br>
-            -Plein de projet fait en lycée
-          </td>
-          <td>
-            -Portfolio<br>
-            -<a href="http://pizzagap.cluster003.ovh.net" class="a">7Pizza</a>
-          </td>
-          <td>
-            -<a href="B1_TP_Shifumi_G2_Mory_Camille.pdf" target="_blank" class="a">Shifumi</a><br>
-            -<a href="B1_BatailleNavale_G2_Mory_Camille.pdf" target="_blank" class="a">Bataille Naval</a><br>
-            -<a href="DOCUMENTATION_UTILISATEUR.pdf" target="_blank" class="a">Projet 1ère année M2L</a>
-          </td>
-        </tr>
-      </table>
+      <div class="card-container">
+        <div class="card">
+          <img src="Web.png" alt="Image 1" />
+          <h3 class="card-title">Web</h3>
+          <div class="ActivityCard">
+            <button class="actifityButton">Portfolio</button>
+            <button class="actifityButton"><a href="" class="aS">GSB WEB</a></button>
+            <button class="actifityButton"><a href="Visuel-Stage-2.pdf" class="aS">Alp'Cloud</a></button>
+            <button class="actifityButton"><a href="http://pizzagap.cluster003.ovh.net" class="aS">7Pizza</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Java.png" alt="Image 1" />
+          <h3 class="card-title">Java</h3>
+          <p class="ActivityCard">
+            <button class="actifityButton"><a href="DOCUMENTATION_UTILISATEUR.pdf" class="aS">M2L</a></button>
+            <button class="actifityButton"><a href="B1_BatailleNavale_G2_Mory_Camille.pdf" class="aS">Bataille Naval</a></button>
+            <button class="actifityButton"><a href="B1_TP_Shifumi_G2_Mory_Camille.pdf" class="aS">Shifumi</a></button>
+          </p>
+        </div>
+        <div class="card">
+          <img src="flutter-bandeau.png" alt="Image 1" />
+          <h3 class="card-title">Flutter</h3>
+          <p class="ActivityCard">
+            <button class="actifityButton"><a href="" class="aS">GSB APP</a></button>
+            <button class="actifityButton"><a href="" class="aS">Nature'Emoi</a></button>
+          </p>
+          
+        </div>
+      </div>
+      <!--
+        <table class="sBorder">
+          <tr>
+            <td id="td1"><b>Python</b></td>
+            <td id="td1"><b>Web</b></td>
+            <td id="td1"><b>java</b></td>
+          </tr>
+          <tr>
+            <td>
+              Bot Dofus Farm<br />
+              Plein de projet fait en lycée
+            </td>
+            <td>
+              Portfolio<br />
+              <a href="http://pizzagap.cluster003.ovh.net" class="a">7Pizza</a>
+            </td>
+            <td>
+              <a
+                href="B1_TP_Shifumi_G2_Mory_Camille.pdf"
+                target="_blank"
+                class="a"
+                >Shifumi</a
+              ><br />
+              <a
+                href="B1_BatailleNavale_G2_Mory_Camille.pdf"
+                target="_blank"
+                class="a"
+                >Bataille Naval</a
+              ><br />
+              <a href="DOCUMENTATION_UTILISATEUR.pdf" target="_blank" class="a"
+                >Projet 1ère année M2L</a
+              >
+            </td>
+          </tr>
+        </table>
+        -->
     </div>
   </div>
   <script src="script.js"></script>
