@@ -4,6 +4,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
 }
 
 * {
@@ -272,7 +273,7 @@ div > p {
 }
 
 .pair {
-  background-color: #f3f3f3;
+  background-color: #ececec;
 }
 
 @media (max-width: 900px) {
@@ -383,6 +384,56 @@ table.sBorder td {
   }
 }
 
+/* Card Stage */
+
+.card-containerS {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.card-descriptionS {
+  font-size: 1em;
+  color: #666;
+  width: 80%;
+  flex-grow: 1; /* Pour permettre à la description de prendre de l'espace */
+  text-align: center;
+}
+
+.IMGStage {
+  height: 30vh;
+  margin-bottom: 15px;
+}
+
+.cardS {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80%;
+  display: flex;
+  flex-direction: column; /* Organise le contenu verticalement */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .cardS {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .IMGStage {
+    height: 20vh;
+  }
+}
 
 /* Style individuel d'une carte */
 /* Mise à jour de la classe .card */
@@ -395,6 +446,8 @@ table.sBorder td {
   flex-direction: column; /* Organise le contenu verticalement */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  padding: 0px 10px 10px 10px;
 }
 
 .card-description {
@@ -406,11 +459,11 @@ table.sBorder td {
 }
 
 .ActivityCard {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  padding: 10px;
   gap: 10px;
 }
 
@@ -418,8 +471,7 @@ table.sBorder td {
   grid-column: span 2;
 }
 
-
-.actifityButton {
+.actifityButton { 
   padding: 10px;
   background-color: #007BFF;
   color: #fff;
@@ -450,12 +502,11 @@ table.sBorder td {
   background-color: #0056b3;
 }
 
-.card img {
+.imgCard {
   width: 100%;
   height: 150px;
   object-fit: cover;
 }
-
 .card-title {
   margin-bottom:  10px;
   font-size: 1.5em;
@@ -465,6 +516,11 @@ table.sBorder td {
 
 /* Effet au survol */
 .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cardS:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
