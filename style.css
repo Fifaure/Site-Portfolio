@@ -18,11 +18,9 @@ body {
 header {
   background: url(Logo.png) fixed;
   background-color: #5b5963;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  position: relative;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
 }
 
 header > div {
