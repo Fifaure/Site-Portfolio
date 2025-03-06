@@ -24,6 +24,13 @@ header {
   position: relative;
 }
 
+/* Désactiver "fixed" pour Safari uniquement */
+@supports (-webkit-touch-callout: none) {
+  header {
+    background-attachment: scroll;
+  }
+}
+
 header > div {
   text-align: center;
   color: aliceblue;
