@@ -1,10 +1,15 @@
-
-document.querySelectorAll('.menu-items a').forEach(item => {
-	item.addEventListener('click', event => {
-	  document.getElementById('menu-toggle').checked = false;
-	});
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.querySelector('.menu-items');
   
+    menuToggle.addEventListener('change', () => {
+      if (menuToggle.checked) {
+        menuItems.style.transform = 'translateY(0)';
+      } else {
+        menuItems.style.transform = 'translateY(-150%)';
+      }
+    });
+  });
 
 // Sélectionner les boutons pour ajouter une interaction
 document.addEventListener('DOMContentLoaded', () => {

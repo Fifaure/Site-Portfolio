@@ -1,44 +1,33 @@
-
 /* -------------------------------------------------------------------------------------------------- */
 /* Burger menu */
+
+a {
+  transition: background-color 0.2s ease-in-out;
+}
 
 .container {
   width: 100%;
 }
 
-.navbar {
-  background: #100e35;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  height: 6vh;
-  
-}
-
-.navbar .nav-container li {
-  list-style: none;
-}
-
-.navbar .nav-container a {
-  text-decoration: none;
-  color: black;
-}
-
-
-.navbar .nav-container a:hover {
-  font-weight: bolder;
-  color: #1d597c;
-}
-
-.nav-container {
+nav {
+  align-items: center;
   display: flex;
-  height: 4vh;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  justify-content: center;
+  font-size: 1.3rem;
 }
 
-.nav-container .checkbox {
+.navbar {
+  background-color: rgba(27, 27, 27, 0.97);
+  position: fixed;
+  top: 20px;
+  z-index: 1000;
+  width: 97%;
+  border-radius: 10px;
+  height: 6vh;
+}
+
+
+.checkbox {
   position: absolute;
   display: block;
   height: 4vh;
@@ -50,7 +39,7 @@
   cursor: pointer;
 }
 
-.nav-container .hamburger-lines {
+.hamburger-lines {
   height: 3vh;
   width: 4vh;
   position: absolute;
@@ -62,7 +51,7 @@
   justify-content: space-between;
 }
 
-.nav-container .hamburger-lines .line {
+.hamburger-lines .line {
   display: block;
   height: 0.3vh;
   width: 100%;
@@ -70,18 +59,18 @@
   background: aliceblue;
 }
 
-.nav-container .hamburger-lines .line1 {
+.hamburger-lines .line1 {
   transform-origin: 0% 0%;
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.nav-container .hamburger-lines .line2 {
-  transition: transform 0.2s ease-in-out;
+.hamburger-lines .line2 {
+  transition: all 0.2s ease-in-out;
 }
 
-.nav-container .hamburger-lines .line3 {
+.hamburger-lines .line3 {
   transform-origin: 0% 100%;
-  transition: transform 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .navbar .menu-items {
@@ -97,36 +86,230 @@
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease-in-out;
+  gap: 10px;
 }
 
 .navbar .menu-items li {
-  margin-bottom: 1.2rem;
-  font-size: 1.5rem;
-  font-weight: 500;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  background: rgb(27, 27, 27);
+  list-style: none;
+  border-radius: 10px;
 }
 
-.nav-container input[type="checkbox"]:checked ~ .menu-items {
+.navbar .menu-items li:hover {
+  background: rgb(82, 82, 82);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar .menu-items a {
+  text-decoration: none;
+  color: white;
+}
+
+
+input[type="checkbox"]:checked~.menu-items {
   transform: translateX(0);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+input[type="checkbox"]:checked~.hamburger-lines .line1 {
   transform: rotate(45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+input[type="checkbox"]:checked~.hamburger-lines .line2 {
   transform: scaleY(0);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+input[type="checkbox"]:checked~.hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .logo {
+input[type="checkbox"]:checked~.logo {
   display: none;
 }
 
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1,
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2,
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+input[type="checkbox"]:checked~.hamburger-lines .line1,
+input[type="checkbox"]:checked~.hamburger-lines .line2,
+input[type="checkbox"]:checked~.hamburger-lines .line3 {
   background-color: black;
 }
+
+@media (min-width: 1100px) {
+  .navbar {
+    display: none;
+  }
+  .highNavbar {
+    display: block;
+  }
+}
+
+@media (max-width: 1099px) {
+  .navbar {
+    display: block;
+  }
+  .highNavbar {
+    display: none;
+  }
+}
+
+.highNavbar {
+  background-color: rgba(27, 27, 27, 0.97);
+  position: fixed;
+  top: 20px;
+  z-index: 1000;
+  width: 97%;
+  border-radius: 10px;
+  height: 6vh;
+  display: flex;
+  gap: 3vw;
+}
+
+.highContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.highContent a{
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.highContent a:hover{
+  background-color: rgb(82, 82, 82);
+}
+
+.Accueil {
+  background-color: rgba(27, 27, 27, 1);
+  width: 250px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+.highContentResponsive {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  
+}
+
+.highContentResponsive a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highContentResponsive a svg {
+  margin-left: 5px;
+}
+.highContentResponsive a:hover {
+  background-color: rgb(82, 82, 82);
+}
+
+.subnav {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: absolute;
+  top: 7vh;
+  left: 0;
+  background-color: rgba(27, 27, 27, 0.97);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#Navigation:hover + .subnav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.subnav:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.subnav a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav a:hover {
+  background-color: rgb(82, 82, 82)
+}
+
+.LogoNav {
+  width:  80%;
+  border-radius: 10px;
+}
+
+.Accueil a:hover {
+  background-color: rgb(82, 82, 82); /* Changez cette couleur selon vos besoins */
+}
+
+.Accueil a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 1999px) {
+  .highContent {
+    display: none;
+  }
+
+  .highContentResponsive {
+    display: flex;
+  }
+}
+
+@media (min-width: 2000px) {
+  .highContent {
+    display: flex;
+  }
+
+  .highContentResponsive {
+    display: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  .highContentResponsive {
+    display: none;
+  }
+  .LogoNav {
+    display: none;
+  }
+}
+
+
+
