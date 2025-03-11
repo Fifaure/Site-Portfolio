@@ -468,7 +468,7 @@ table.sBorder td {
   gap: 10px;
 }
 
-.ActivityCard button:last-child:nth-child(odd) {
+.ActivityCard a:last-child:nth-child(odd) {
   grid-column: span 2;
 }
 
