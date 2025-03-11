@@ -77,16 +77,6 @@ header > div > strong > div {
   }
 }
 
-.a {
-  text-decoration: none;
-  color: black;
-}
-
-.a:hover {
-  text-decoration: none;
-  color: #1d597c;
-}
-
 .aS {
   text-decoration: none;
   color: #1d597c;
@@ -313,42 +303,6 @@ div > p {
 }
 
 
-
-/* Table */
-th {
-  background-color: #f2f2f2;
-}
-
-table.sBorder {
-  border: none;
-}
-
-#td1 {
-  text-align: center;
-}
-table.sBorder td {
-  border: none;
-}
-
-table.sBorder th,
-table.sBorder td {
-  padding: 20px 40px 0px 40px;
-  font-size: 25px;
-}
-
-@media (max-width: 600px) {
-  table.sBorder th,
-  table.sBorder td {
-    padding: 10px;
-    font-size: 20px;
-  }
-}
-
-.aBorder {
-  margin-bottom: 50px;
-}
-
-
 /* Conteneur de cartes */
 .card-container {
   padding: 20px;
@@ -413,7 +367,7 @@ table.sBorder td {
 .cardS {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 800px;
   display: flex;
@@ -441,7 +395,7 @@ table.sBorder td {
 .card {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column; /* Organise le contenu verticalement */
@@ -474,7 +428,7 @@ table.sBorder td {
 
 .actifityButton { 
   padding: 10px;
-  background-color: #007BFF;
+  background-color: #292767;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -483,7 +437,7 @@ table.sBorder td {
 }
 
 .actifityButton:hover {
-  background-color: #0056b3;
+  background-color: #110f35;
 }
 
 .card-btn {
@@ -491,7 +445,7 @@ table.sBorder td {
   margin-bottom: 15px;
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #292767;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -500,7 +454,7 @@ table.sBorder td {
 }
 
 .card-btn:hover {
-  background-color: #0056b3;
+  background-color: #110f35;
 }
 
 .imgCard {
@@ -518,10 +472,10 @@ table.sBorder td {
 /* Effet au survol */
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 8px 3px rgba(0, 0, 0, 0.1);
 }
 
 .cardS:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 8px 3px rgba(0, 0, 0, 0.1);
 }

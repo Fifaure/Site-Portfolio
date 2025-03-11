@@ -69,31 +69,6 @@ header > div > strong > div {
   }
 }
 
-.a {
-  text-decoration: none;
-  color: black;
-}
-
-.a:hover {
-  text-decoration: none;
-  color: #1d597c;
-}
-
-.aS {
-  text-decoration: none;
-  color: #1d597c;
-}
-
-.transition {
-  height: 50px;
-  position: relative;
-  background-color: #100e35;
-}
-
-.aS {
-  text-decoration: none;
-  color: white;
-}
 
 /* Style global */
 body {
@@ -105,11 +80,29 @@ body {
 
 /* Conteneur de cartes */
 .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     padding: 20px;
+}
+
+
+@media (max-width: 1280px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  .card-container .card:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 850px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-container .card:last-child:nth-child(odd) {
+    grid-column: span 1;
+  }
 }
 
 /* Style individuel d'une carte */
@@ -119,12 +112,14 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 400px;
     display: flex;
     flex-direction: column; /* Organise le contenu verticalement */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
 }
+
+
 
 .card-description {
     font-size: 1em;
@@ -138,7 +133,7 @@ body {
     margin-bottom: 15px;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #292767;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -147,13 +142,25 @@ body {
 }
 
 .card-btn:hover {
-    background-color: #0056b3;
+    background-color: #110f35;
 }
 
 .card img {
-    width: 100%;
-    height: 150px;
+    width: 400px;
+    height: 200px;
     object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  .card img {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+.imgdiv {
+  width: 100%;
+  background-color: #000;
 }
 
 .card-title {
