@@ -237,7 +237,7 @@ input[type="checkbox"]:checked~.hamburger-lines .line3 {
   gap: 10px;
   flex-direction: column;
   position: absolute;
-  top: 8vh;
+  top: 85px;
   left: 0;
   background-color: rgba(27, 27, 27, 0.97);
   border-radius: 10px;
