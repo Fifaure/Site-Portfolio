@@ -13,6 +13,8 @@ body {
   scroll-behavior: smooth;
 }
 
+
+
 /* -------------------------------------------------------------------------------------------------- */
 /* Header */
 
@@ -76,6 +78,7 @@ header > div > strong > div {
     top: 230px;
   }
 }
+
 
 .aS {
   text-decoration: none;
