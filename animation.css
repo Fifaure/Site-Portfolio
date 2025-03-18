@@ -1,0 +1,99 @@
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+@keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animation {
+    animation: fadeInBottom ease 1s;
+  }
+
+.animationNav {
+  animation: fadeInTop ease 1s;
+}
+
+.animationTitle {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s ease;
+    will-change: transform, opacity;
+    position: relative;
+}
+
+.animationTitle.animate {
+    animation: fadeInRight ease 1s forwards;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animationContent {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease;
+    will-change: transform, opacity;
+    position: relative;
+}
+
+.animationContent.animate {
+    animation: fadeInLeft ease 1s forwards;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Ajout des classes pour les sections parentes */
+#qui, #parc, #stage, #act {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Conteneurs des animations */
+.contain, .contain2, .contain3 {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#pres {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}

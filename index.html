@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link rel="stylesheet" href="card.css" />
+  <script src="script.js"></script>
   <title>Portfolio Mory Camille</title>
   <link rel="icon" href="Favicon.png" type="image/x-icon" />
 </head>
@@ -14,7 +17,7 @@
   <header>
     <div>
       <strong class="outline-text">
-        <div>
+        <div class="animation">
           Bonjour,
           <div class="mainTitle">Je m'appelle Camille Mory</div>
           Étudiant en BTS SIO
@@ -23,12 +26,15 @@
     </div>
   </header>
   <nav>
-    <div class="highNavbar" id="highNav">
+    <div class="highNavbar animationNav" id="highNav">
       <div class="Accueil">
         <a href="#"><img src="LogoNav.png" alt="LogoNav" class="LogoNav"></a>
       </div>
       <div class="highContentResponsive">
-        <a href="#qui" id="Navigation">Navigation <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></a>
+        <a href="#qui" id="Navigation">Navigation <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#fff">
+            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+          </svg></a>
         <div class="subnav">
           <a href="#qui" id="subnav">Qui-suis-je?</a>
           <a href="#parc" id="subnav">Parcours</a>
@@ -47,7 +53,7 @@
         <a href="CV_Camille.pdf" target="_blank">Mon CV</a>
       </div>
     </div>
-    <div class="navbar" id="nav">
+    <div class="navbar animationNav" id="nav">
       <div class="menuPrincipale">
         <input class="checkbox" type="checkbox" name="" id="menu-toggle" />
         <div class="hamburger-lines">
@@ -68,35 +74,35 @@
   </nav>
 
   <div id="qui">
-    <div class="contain">
+    <div class="contain animationTitle">
       <div class="qui">Présentation</div>
       <div class="h2pres">Qui-suis-je?</div>
     </div>
-    <div id="pres">
+    <div id="pres" class="animationContent">
       <p id="paragraphe">
-        Passionné par le développement et l'informatique depuis mon plus jeune âge, 
-        je poursuis actuellement un BTS SIO à GAP. Curieux et motivé, 
-        j’explore avec enthousiasme les bases de divers langages de programmation 
-        afin d’élargir mes compétences et ma vision du domaine.
+        Passionné par le développement et l'informatique depuis mon plus jeune âge,
+        je poursuis actuellement un BTS SIO à GAP. Curieux et motivé,
+        j'explore avec enthousiasme les bases de divers langages de programmation
+        afin d'élargir mes compétences et ma vision du domaine.
         <br /><br />
-        En parallèle de mes études, j’ai réalisé plusieurs projets personnels 
-        qui m’ont permis d’approfondir ma compréhension de la programmation 
-        sous un angle plus concret et pratique. Ces expériences m’ont aidé à 
+        En parallèle de mes études, j'ai réalisé plusieurs projets personnels
+        qui m'ont permis d'approfondir ma compréhension de la programmation
+        sous un angle plus concret et pratique. Ces expériences m'ont aidé à
         renforcer mes compétences techniques et à développer ma capacité à résoudre des problèmes réels.
       </p>
     </div>
   </div>
   <div id="parc" class="pair">
     <br />
-    <div class="contain2">
+    <div class="contain2 animationTitle">
       <div class="parc">Présentation</div>
       <div class="h2pres2">Parcours</div>
     </div>
 
-    <div id="pres">
+    <div id="pres" class="animationContent">
       <div class="card-container">
         <div class="card">
-          <img src="Bac.png" alt="Image 1" class="imgCard"/>
+          <img src="Bac.png" alt="Image 1" class="imgCard" />
           <h3 class="card-title">Baccalauréat 2023</h3>
           <p class="card-description">
             <b>Lycée Saint-Joseph GAP</b><br />
@@ -106,7 +112,7 @@
           <a target="_blank" href="Bac.pdf" class="aS"><button class="card-btn">Voir Plus</button></a>
         </div>
         <div class="card">
-          <img src="pix.png" alt="Image 1" class="imgCard"/>
+          <img src="pix.png" alt="Image 1" class="imgCard" />
           <h3 class="card-title">PIX 2024</h3>
           <p class="card-description">
             <b>Certification :</b> 605 points<br />
@@ -114,7 +120,7 @@
           <a target="_blank" href="Pix.pdf" class="aS"><button class="card-btn">Voir Plus</button></a>
         </div>
         <div class="card">
-          <img src="Brevet.png" alt="Image 1" class="imgCard"/>
+          <img src="Brevet.png" alt="Image 1" class="imgCard" />
           <h3 class="card-title">Brevet 2020</h3>
           <p class="card-description">
             <b>Collège Saint-Joseph GAP</b><br />
@@ -126,38 +132,41 @@
     </div>
   </div>
   <div id="stage">
-    <div class="contain">
+    <div class="contain animationTitle">
       <div class="parc">Présentation</div>
       <div class="h2pres">Stage</div>
     </div>
-    <div id="pres">
+    <div id="pres" class="animationContent">
       <div class="card-containerS">
         <div class="cardS">
           <div style="width: 320px;">
-            <img src="7pizza.png" alt="Image 1" style="width: 320px;"/>
+            <img src="7pizza.png" alt="Image 1" style="width: 320px;" />
           </div>
           <div class="card-descriptionS">
-            Ce stage a été réalisé au sein de l'entreprise <strong>7pizza</strong>, située à <strong>GAP</strong>,  
-            <br />du <strong>27/05/2024</strong> au <strong>07/07/2024</strong>.  
-            <br /><br />  
-            Il avait pour objectif de mettre en pratique les compétences acquises durant ma formation en BTS SIO, avec pour projet la réalisation et l'hébergement d'un site web.  
-            J'ai notamment appris à maîtriser le <strong>responsive design</strong>, une notion que je ne comprenais pas bien avant ce stage.  
-            J'ai également appris à utiliser <strong>OVH</strong> pour l'hébergement du site web.  
+            Ce stage a été réalisé au sein de l'entreprise <strong>7pizza</strong>, située à <strong>GAP</strong>,
+            <br />du <strong>27/05/2024</strong> au <strong>07/07/2024</strong>.
+            <br /><br />
+            Il avait pour objectif de mettre en pratique les compétences acquises durant ma formation en BTS SIO, avec
+            pour projet la réalisation et l'hébergement d'un site web.
+            J'ai notamment appris à maîtriser le <strong>responsive design</strong>, une notion que je ne comprenais pas
+            bien avant ce stage.
+            J'ai également appris à utiliser <strong>OVH</strong> pour l'hébergement du site web.
             <br /><br />
 
           </div>
           <div>
             <a href="CPTRendu.pdf" target="_blank" class="aS"><button class="card-btn">Rapport Journalier</button></a>
-            <a href="http://pizzagap.cluster003.ovh.net" target="_blank" class="aS"><button class="card-btn">Site</button></a>
+            <a href="http://pizzagap.cluster003.ovh.net" target="_blank" class="aS"><button
+                class="card-btn">Site</button></a>
           </div>
         </div>
         <div class="cardS">
           <div style="width: 320px;">
-            <img src="Alp'Cloud.png" alt="Image 1" style="width: 320px;"/>
+            <img src="Alp'Cloud.png" alt="Image 1" style="width: 320px;" />
           </div>
           <div class="card-descriptionS">
             Ce stage a été réalisé au sein de l'entreprise
-            <strong>Alp'Cloud</strong> située dans les <strong>Alpes du Sud</strong> 
+            <strong>Alp'Cloud</strong> située dans les <strong>Alpes du Sud</strong>
             <br /> du <strong>06/01/2025</strong> au <strong>07/02/2025</strong>.
             <br /><br />
             Il a pour objectif la création d'une plateforme de gestion de VPS et
@@ -170,54 +179,74 @@
           </div>
           <div>
             <a href="CPTRendu2.pdf" target="_blank" class="aS"><button class="card-btn">Rapport Journalier</button></a>
-            <a href="Doc_UtilisateurAlpcloud.pdf" target="_blank" class="aS"><button class="card-btn">Doc Utilisateur</button></a>
+            <a href="Doc_UtilisateurAlpcloud.pdf" target="_blank" class="aS"><button class="card-btn">Doc
+                Utilisateur</button></a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div id="act" class="pair">
-    <div class="contain3">
+    <div class="contain3 animationTitle">
       <div class="act">Activités</div>
       <div class="h2pres3">Réalisation</div>
     </div>
-    <div id="pres">
-      <div class="card-container">
-        <div class="card">
-          <div style="width: 350px;">
-            <img src="Web.png" alt="Image 1" class="imgCard"/>
-          </div>
-          <div class="ActivityCard" style="max-width: 300px;">
-            <a href="#" class="aS actifityButton">Portfolio</a>
-            <a target="_blank" href="AP-GSB-MORY-RUGGERI-SLAM.pdf" class="aS actifityButton">GSB WEB</a>
-            <a target="_blank" href="Visuel-Stage-2.pdf" class="aS actifityButton">Alp'Cloud</a>
-            <a target="_blank" href="http://pizzagap.cluster003.ovh.net" class="aS actifityButton">7Pizza</a>
+    <div class="containerCard">
+      <div class="cardActi">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <img src="Web.png" alt="Image 1" class="imgCards" />
+              <div class="arrow-down"></div>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div style="width: 350px;">
-            <img src="Java.png" alt="Image 1" class="imgCard"/>
-          </div>
-          <div class="ActivityCard" style="max-width: 300px;">
-            <a target="_blank" href="DOCUMENTATION_UTILISATEUR.pdf" class="aS actifityButton">M2L</a>
-            <a target="_blank" href="B1_BatailleNavale_G2_Mory_Camille.pdf" class="aS actifityButton">Bataille Navale</a>
-            <a target="_blank" href="B1_TP_Shifumi_G2_Mory_Camille.pdf" class="aS actifityButton">Shifumi</a>
+        <div class="face face2">
+          <div class="content">
+            <a href="#" class="contentButton">Portfolio</a>
+            <a target="_blank" href="AP-GSB-MORY-RUGGERI-SLAM.pdf" class="contentButton">GSB WEB</a>
+            <a target="_blank" href="Visuel-Stage-2.pdf" class="contentButton">Alp'Cloud</a>
+            <a target="_blank" href="http://pizzagap.cluster003.ovh.net" class="contentButton">7Pizza</a>
           </div>
         </div>
-        <div class="card">
-          <div style="width: 350px;">
-            <img src="flutter-bandeau.png" alt="Image 1" class="imgCard"/>
-          </div>
-          <div class="ActivityCard" style="max-width: 300px;">
-            <a target="_blank" href="AP-GSB-MORY-RUGGERI-SLAM.pdf" class="aS actifityButton">GSB APP</a>
-            <a target="_blank" href="Nature'Emoi.pdf" class="aS actifityButton">Nature'Emoi</a>
-          </div>
+      </div>
+      <div class="cardActi">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <img src="Java.png" alt="Image 1" class="imgCards" />
+              <div class="arrow-down"></div>
 
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <a target="_blank" href="DOCUMENTATION_UTILISATEUR.pdf" class="contentButton">M2L</a>
+            <a target="_blank" href="B1_BatailleNavale_G2_Mory_Camille.pdf" class="contentButton">Bataille
+              Navale</a>
+            <a target="_blank" href="B1_TP_Shifumi_G2_Mory_Camille.pdf" class="contentButton">Shifumi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardActi">
+        <div class="face face1">
+          <div class="content">
+            <div class="icon">
+              <img src="flutter-bandeau.png" alt="Image 1" class="imgCards" />
+              <div class="arrow-down"></div>
+            </div>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <a target="_blank" href="AP-GSB-MORY-RUGGERI-SLAM.pdf" class="contentButton">GSB APP</a>
+            <a target="_blank" href="Nature'Emoi.pdf" class="contentButton">Nature'Emoi</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
 </body>
-
 </html>

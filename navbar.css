@@ -91,6 +91,8 @@ nav {
   align-items: center;
   transition: all 0.5s ease-in-out;
   gap: 10px;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .navbar .menu-items li {
@@ -114,7 +116,9 @@ nav {
 
 
 input[type="checkbox"]:checked~.menu-items {
-  transform: translateX(0);
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 input[type="checkbox"]:checked~.hamburger-lines .line1 {
@@ -144,7 +148,13 @@ input[type="checkbox"]:checked~.hamburger-lines .line3 {
     display: none;
   }
   .highNavbar {
-    display: block;
+    display: flex;
+  }
+  .highContentResponsive {
+    display: none;
+  }
+  .menu-items {
+    display: none;
   }
 }
 
@@ -154,6 +164,24 @@ input[type="checkbox"]:checked~.hamburger-lines .line3 {
   }
   .highNavbar {
     display: none;
+  }
+  .highContent {
+    display: none;
+  }
+  .highContentResponsive {
+    display: flex;
+  }
+  .menu-items {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  .highContentResponsive {
+    display: none;
+  }
+  .navbar {
+    display: block;
   }
 }
 
@@ -165,7 +193,6 @@ input[type="checkbox"]:checked~.hamburger-lines .line3 {
   width: 97%;
   border-radius: 10px;
   height: 75px;
-  display: flex;
   gap: 3vw;
 }
 

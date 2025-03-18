@@ -15,6 +15,7 @@ body {
 
 
 
+
 /* -------------------------------------------------------------------------------------------------- */
 /* Header */
 
@@ -145,11 +146,21 @@ div > p {
   .contain {
     position: relative;
     height: 115px;
-    padding-top: 60px;
+    padding-top: 0;
   }
   #pres {
-    padding: 0 20px 20px 20px;
+    padding: 0;
+    margin: 30px auto 60px auto;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
   }
+  #paragraphe {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -211,7 +222,11 @@ div > p {
   .contain2 {
     position: relative;
     height: 115px;
-    padding-top: 60px;
+    padding-top: 0;
+  }
+  .card-container {
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 }
 
@@ -287,7 +302,7 @@ div > p {
   .contain3 {
     position: relative;
     height: 115px;
-    padding-top: 60px;
+    padding-top: 0;
   }
 }
 
@@ -401,11 +416,48 @@ div > p {
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Organise le contenu verticalement */
+  flex-direction: column;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.6s ease;
   align-items: center;
   padding: 0px 10px 10px 10px;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card .front {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transform: rotateY(180deg);
+  transition: transform 0.6s ease;
+  backface-visibility: hidden;
+  padding: 20px;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0);
 }
 
 .card-description {
@@ -425,9 +477,6 @@ div > p {
   gap: 10px;
 }
 
-.ActivityCard a:last-child:nth-child(odd) {
-  grid-column: span 2;
-}
 
 .actifityButton { 
   padding: 10px;
@@ -465,12 +514,17 @@ div > p {
   height: 150px;
   object-fit: cover;
 }
+
 .card-title {
-  margin-bottom:  10px;
+  margin: 10px 0;
   font-size: 1.5em;
   color: #333;
+  transition: transform 0.6s ease;
 }
 
+.card:hover .card-title {
+  transform: translateY(-10px);
+}
 
 /* Effet au survol */
 .card:hover {
