@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // Gestion des animations au scroll
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('#qui, #parc, #stage, #act');
-  const vh30 = window.innerHeight * 0.3; // 60% de la hauteur de la fenêtre
+  const vh30 = window.innerHeight * 0.3; // 30% de la hauteur de la fenêtre
 
   function checkVisibility() {
     sections.forEach(section => {
@@ -63,15 +63,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
         
         if (visibleHeight >= vh30) {
-          // Récupérer tous les éléments à animer dans la section
-          const animatedElements = section.querySelectorAll('.animationTitle, .animationContent');
-          
-          // Animer chaque élément avec un délai
-          animatedElements.forEach((element, index) => {
-            setTimeout(() => {
-              element.classList.add('animate');
-            }, index * 200); // Délai de 200ms entre chaque animation
+          // D'abord, animer les titres
+          const titleElements = section.querySelectorAll('.animationTitle');
+          titleElements.forEach((element) => {
+            element.classList.add('animate');
           });
+          
+          // Ensuite, animer le contenu avec un délai réduit
+          setTimeout(() => {
+            const contentElements = section.querySelectorAll('.animationContent');
+            contentElements.forEach((element) => {
+              element.classList.add('animate');
+            });
+          }, 150); // Réduit de 300ms à 150ms
+          
+          // Enfin, animer les cartes avec un délai supplémentaire réduit
+          setTimeout(() => {
+            const cards = section.querySelectorAll('.cardActi');
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('animate');
+              }, index * 100); // Réduit de 200ms à 100ms entre chaque carte
+            });
+          }, 300); // Réduit de 600ms à 300ms
 
           section.classList.add('animated');
         }
@@ -90,35 +104,42 @@ document.addEventListener('DOMContentLoaded', () => {
 // ---------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.contentButton');
-    const projectContents = document.querySelectorAll('.project-content');
-    const defaultImage = document.querySelector('.face1:not(.project-content)');
+    const cardActis = document.querySelectorAll('.cardActi');
+    
+    cardActis.forEach(card => {
+        const buttons = card.querySelectorAll('.contentButton');
+        const projectDescription = card.querySelector('.project-description');
+        const icon = card.querySelector('.icon');
+        const paragraphs = card.querySelectorAll('.project-description p');
 
-    // Fonction pour afficher le contenu du projet
-    function showProject(projectId) {
-        // Cacher tous les contenus de projet
-        projectContents.forEach(content => {
-            content.classList.remove('active');
+        // Cacher tous les paragraphes au chargement
+        paragraphs.forEach(p => {
+            p.style.display = 'none';
         });
 
-        // Afficher le contenu du projet sélectionné
-        const selectedProject = document.getElementById(projectId);
-        if (selectedProject) {
-            selectedProject.classList.add('active');
-        }
-    }
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                const projectId = button.getAttribute('id');
+                if (projectId) {
+                    // Cacher tous les paragraphes
+                    paragraphs.forEach(p => {
+                        p.style.display = 'none';
+                    });
+                    // Afficher le paragraphe correspondant
+                    const targetParagraph = document.getElementById(projectId);
+                    if (targetParagraph) {
+                        targetParagraph.style.display = 'block';
+                    }
+                    // Afficher la description et cacher l'icône
+                    projectDescription.style.opacity = '1';
+                    icon.style.opacity = '0';
+                }
+            });
 
-    // Gérer le survol des boutons
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            const projectId = button.getAttribute('data-project');
-            showProject(projectId);
-        });
-
-        button.addEventListener('mouseleave', () => {
-            // Revenir à l'image par défaut
-            projectContents.forEach(content => {
-                content.classList.remove('active');
+            button.addEventListener('mouseleave', () => {
+                // Cacher la description et afficher l'icône
+                projectDescription.style.opacity = '0';
+                icon.style.opacity = '1';
             });
         });
     });
