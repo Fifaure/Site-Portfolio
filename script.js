@@ -22,6 +22,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Tri des cards dans veille.html par date (du plus récent au plus ancien)
+document.addEventListener("DOMContentLoaded", function() {
+  // Vérifier si nous sommes sur la page veille.html
+  if (window.location.pathname.includes('veille.html')) {
+    const container = document.querySelector('.card-container');
+    if (container) {
+      const cards = Array.from(container.querySelectorAll('.card'));
+      
+      // Fonction pour transformer la date au format Date
+      const formatDate = (dateString) => {
+        // Si la date est juste "2025" (année sans jour ni mois), on la transforme en 31/12/2025
+        if (dateString === "2025") {
+          return new Date(2025, 11, 31); // Décembre = 11 (index 0-based)
+        }
+        
+        const dateParts = dateString.split('/');
+        return new Date(`${dateParts[1]}/${dateParts[0]}/${dateParts[2]}`); // format JJ/MM/AAAA
+      };
+      
+      // Trier les cartes par date
+      cards.sort((cardA, cardB) => {
+        const dateA = cardA.querySelector('h4').textContent.trim();
+        const dateB = cardB.querySelector('h4').textContent.trim();
+        
+        // Vérifier si l'une des cartes contient 2025 dans sa date
+        const isA2025 = dateA.includes("2025");
+        const isB2025 = dateB.includes("2025");
+        
+        // Si les deux cartes sont de 2025, on les trie normalement entre elles
+        if (isA2025 && isB2025) {
+          const dateAFormatted = formatDate(dateA);
+          const dateBFormatted = formatDate(dateB);
+          return dateBFormatted - dateAFormatted; // Du plus récent au plus ancien
+        }
+        
+        // Si seule la carte A est de 2025, elle vient en premier
+        if (isA2025) return -1;
+        
+        // Si seule la carte B est de 2025, elle vient en premier
+        if (isB2025) return 1;
+        
+        // Si aucune n'est de 2025, on trie normalement
+        const dateAFormatted = formatDate(dateA);
+        const dateBFormatted = formatDate(dateB);
+        return dateBFormatted - dateAFormatted; // Du plus récent au plus ancien
+      });
+      
+      // Retirer toutes les cartes
+      cards.forEach(card => card.remove());
+      
+      // Ajouter les cartes triées
+      cards.forEach(card => container.appendChild(card));
+    }
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function() {
   const table = document.getElementById("moteurTable");
   const rows = Array.from(table.getElementsByTagName("tr"));
