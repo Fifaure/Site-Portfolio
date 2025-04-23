@@ -20,7 +20,7 @@ body {
 /* Header */
 
 header {
-  background: url(Logo.png) fixed;
+  background: url(img/Logo.png) fixed;
   background-color: #5b5963;
   background-size: cover;
   background-position: center; /* Centre l'image horizontalement et verticalement */
