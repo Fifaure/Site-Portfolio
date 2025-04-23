@@ -49,7 +49,7 @@ nav {
   height: 40px;
   width: 53px;
   z-index: 2;
-  margin-left: 1vw;
+  margin-left: 11px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -275,7 +275,28 @@ input[type="checkbox"]:checked~.hamburger-lines .line3 {
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
+.subnav2 {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  position: absolute;
+  top: 85px;
+  left: 190px;
+  background-color: rgba(27, 27, 27, 0.97);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
 #Navigation:hover + .subnav {
+  opacity: 1;
+  visibility: visible;
+}
+
+#Veille:hover + .subnav2 {
   opacity: 1;
   visibility: visible;
 }
@@ -293,6 +314,22 @@ input[type="checkbox"]:checked~.hamburger-lines .line3 {
 }
 
 .subnav a:hover {
+  background-color: rgb(82, 82, 82)
+}
+
+.subnav2:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.subnav2 a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav2 a:hover {
   background-color: rgb(82, 82, 82)
 }
 
