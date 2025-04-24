@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Gestion des animations au scroll
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('#qui, #parc, #stage, #act');
+  const sections = document.querySelectorAll('#qui, #parc, #act, #stage1, #stage2, #stageTitle');
   const vh30 = window.innerHeight * 0.3; // 30% de la hauteur de la fenêtre
 
   function checkVisibility() {
@@ -123,19 +123,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
         
         if (visibleHeight >= vh30) {
+          section.classList.add('animate');
+
           // D'abord, animer les titres
           const titleElements = section.querySelectorAll('.animationTitle');
           titleElements.forEach((element) => {
             element.classList.add('animate');
           });
+
+          const titleElements2 = section.querySelectorAll('.animationTitle2');
+          titleElements2.forEach((element) => {
+            element.classList.add('animate');
+          });
           
           // Ensuite, animer le contenu avec un délai réduit
-          setTimeout(() => {
-            const contentElements = section.querySelectorAll('.animationContent');
-            contentElements.forEach((element) => {
-              element.classList.add('animate');
-            });
-          }, 150); // Réduit de 300ms à 150ms
+          const contentElements = section.querySelectorAll('.animationContent');
+          contentElements.forEach((element) => {
+            element.classList.add('animate');
+          });
           
           // Enfin, animer les cartes avec un délai supplémentaire réduit
           setTimeout(() => {

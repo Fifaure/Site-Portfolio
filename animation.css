@@ -64,6 +64,20 @@
     transform: translateX(0);
 }
 
+.animationTitle2 {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease;
+  will-change: transform, opacity;
+  position: relative;
+}
+
+.animationTitle2.animate {
+  animation: fadeInTop ease 1s forwards;
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .animationContent {
     opacity: 0;
     transform: translateX(-100%);
@@ -76,6 +90,20 @@
     animation: fadeInLeft ease 1s forwards;
     opacity: 1;
     transform: translateX(0);
+}
+
+.animationContent2 {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+  will-change: transform, opacity;
+  position: relative;
+}
+
+.animationContent2.animate {
+  animation: fadeInRight ease 1s forwards;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Ajout des classes pour les sections parentes */
@@ -97,3 +125,4 @@
     position: relative;
     width: 100%;
 }
+
