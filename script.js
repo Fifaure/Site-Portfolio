@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Gestion des animations au scroll
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('#qui, #parc, #act, #stage1, #stage2, #stageTitle');
+  const sections = document.querySelectorAll('#qui, #parc, #act, #stage, #stage2');
   const vh30 = window.innerHeight * 0.3; // 30% de la hauteur de la fenêtre
 
   function checkVisibility() {
@@ -126,13 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
           section.classList.add('animate');
 
           // D'abord, animer les titres
-          const titleElements = section.querySelectorAll('.animationTitle');
+          const titleElements = section.querySelectorAll('.animationTitle, .animationTitle2');
           titleElements.forEach((element) => {
-            element.classList.add('animate');
-          });
-
-          const titleElements2 = section.querySelectorAll('.animationTitle2');
-          titleElements2.forEach((element) => {
             element.classList.add('animate');
           });
           
