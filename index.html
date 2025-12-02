@@ -31,10 +31,9 @@
   <link rel="icon" href="img/Favicon.png" type="image/x-icon" />
 </head>
 
-<body>
+<body id="top">
   <!-- Barre de progression -->
   <div class="scroll-progress" id="scrollProgress"></div>
-
   <!-- Toggle Dark Mode -->
   <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Changer de thème">
     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -45,13 +44,12 @@
       <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
     </svg>
   </button>
-
   <!-- Bouton retour en haut -->
-  <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+  <a href="#top" id="backToTop" class="back-to-top" aria-label="Retour en haut">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="m18 15-6-6-6 6"/>
     </svg>
-  </button>
+  </a>
 
   <header>
     <div>
@@ -79,16 +77,18 @@
           </svg></a>
         <div class="subnav">
           <a href="#qui" id="subnav">Qui-suis-je?</a>
+          <a href="#skills" id="subnav">Compétences</a>
           <a href="#parc" id="subnav">Parcours</a>
-          <a href="#stage" id="subnav">Stage</a>
+          <a href="#stage" id="subnav">Experiences</a>
           <a href="#act" id="subnav">Réalisation</a>
         </div>
         <a href="pdf/CV_Camille.pdf" target="_blank">Mon CV</a>
       </div>
       <div class="highContent">
         <a href="#qui">Qui-suis-je?</a>
+        <a href="#skills">Compétences</a>
         <a href="#parc">Parcours</a>
-        <a href="#stage">Stage</a>
+        <a href="#stage">Experiences</a>
         <a href="#act">Réalisation</a>
         <a href="pdf/CV_Camille.pdf" target="_blank">Mon CV</a>
       </div>
@@ -104,22 +104,21 @@
       </div>
       <div class="menu-items">
         <li><a href="#qui">Qui-suis-je?</a></li>
+        <li><a href="#skills">Compétences</a></li>
         <li><a href="#parc">Parcours</a></li>
-        <li><a href="#stage">Stage</a></li>
+        <li><a href="#stage">Experiences</a></li>
         <li><a href="#act">Réalisation</a></li>
-        <li><a href="pdf/Competences.pdf" target="_blank">Compétences</a></li>
         <li><a href="pdf/CV_Camille.pdf" target="_blank">Mon CV</a></li>
       </div>
     </div>
   </nav>
 
   <div id="qui">
-    <br>
-    <div class="contain animationTitle">
-      <div class="qui">Présentation</div>
-      <div class="h2pres">Qui-suis-je?</div>
+    <div class="section-header animationTitle">
+      <div class="section-label">Présentation</div>
+      <div class="section-title">Qui-suis-je?</div>
     </div>
-    <div id="pres" class="animationContent">
+    <div class="section-content animationContent">
       <p id="paragraphe">
         Passionné par le développement et l'informatique depuis mon plus jeune âge,
         je suis diplômé d'un BTS SIO option SLAM et je poursuis actuellement 
@@ -137,13 +136,12 @@
 
   <!-- Section Compétences -->
   <div id="skills" class="pair">
-    <br>
-    <div class="contain2 animationTitle">
-      <div class="parc">Expertise</div>
-      <div class="h2pres2">Compétences</div>
+    <div class="section-header animationTitle">
+      <div class="section-label">Expertise</div>
+      <div class="section-title">Compétences</div>
     </div>
-    <div class="skills-container animationContent">
-      <div class="skills-grid">
+    <div class="section-content animationContent">
+      <div class="cards-grid cards-grid--skills">
         <div class="skill-card">
           <div class="skill-icon">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
@@ -205,14 +203,12 @@
   </div>
 
   <div id="parc">
-    <br />
-    <div class="contain animationTitle">
-      <div class="qui">Présentation</div>
-      <div class="h2pres">Parcours</div>
+    <div class="section-header animationTitle">
+      <div class="section-label">Présentation</div>
+      <div class="section-title">Parcours</div>
     </div>
-
-    <div id="pres" class="animationContent">
-      <div class="card-container">
+    <div class="section-content animationContent">
+      <div class="cards-grid cards-grid--parcours">
         <div class="card">
           <span class="card-badge">Diplômé</span>
           <img src="img/BTS.png" alt="BTS SIO" class="imgCard" loading="lazy" />
@@ -226,7 +222,7 @@
         </div>
         <div class="card">
           <span class="card-badge">Certifié</span>
-          <img src="img/pix.png" alt="Certification PIX" class="imgCard" loading="lazy" />
+          <img src="img/Pix.png" alt="Certification PIX" class="imgCard" loading="lazy" />
           <h3 class="card-title">Certification PIX</h3>
           <p class="card-description">
             <b>🏆 Score :</b> 605 points<br />
@@ -249,14 +245,14 @@
       </div>
     </div>
   </div>
+
   <div id="stage">
-    <br>
-    <div class="contain animationTitle">
-      <div class="parc">Présentation</div>
-      <div class="h2pres">Stage</div>
+    <div class="section-header animationTitle">
+      <div class="section-label">Présentation</div>
+      <div class="section-title">Experiences</div>
     </div>
-    <div id="pres" class="animationContent">
-      <div class="card-containerS">
+    <div class="section-content animationContent">
+      <div class="cards-grid cards-grid--stage">
         <!-- Ixcys - Alternance -->
         <div class="cardS">
           <div class="cardS-image">
@@ -324,15 +320,16 @@
         </div>
     </div>
   </div>
+
   <div id="act" class="pair">
-    <br>
-    <div class="contain3 animationTitle">
-      <div class="act">Activités</div>
-      <div class="h2pres3">Réalisation</div>
+    <div class="section-header animationTitle">
+      <div class="section-label">Activités</div>
+      <div class="section-title">Réalisation</div>
     </div>
-    <div class="containerCard">
-      <!-- Carte Web -->
-      <div class="cardActi">
+    <div class="section-content animationContent">
+      <div class="cards-grid cards-grid--projects">
+        <!-- Carte Web -->
+        <div class="cardActi">
         <div class="cardActi-header">
           <div class="cardActi-icon">
             <img src="img/Web.png" alt="Web" loading="lazy" />
@@ -471,6 +468,7 @@
             <div class="tech-dot dart"><span>Dart</span></div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>

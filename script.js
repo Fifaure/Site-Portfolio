@@ -19,42 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================
-// BOUTON RETOUR EN HAUT
+// BOUTON RETOUR EN HAUT (affichage/masquage)
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
   const backToTopBtn = document.getElementById('backToTop');
   
   if (backToTopBtn) {
-    // Afficher/masquer le bouton au scroll
     window.addEventListener('scroll', () => {
       if (window.scrollY > 500) {
         backToTopBtn.classList.add('visible');
       } else {
         backToTopBtn.classList.remove('visible');
       }
-    });
-
-    // Remonter en haut au clic avec animation smooth
-    backToTopBtn.addEventListener('click', () => {
-      const scrollDuration = 800; // Durée en ms
-      const scrollStart = window.scrollY;
-      const startTime = performance.now();
-
-      const animateScroll = (currentTime) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / scrollDuration, 1);
-        
-        // Easing function (ease-out cubic)
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-        
-        window.scrollTo(0, scrollStart * (1 - easeOut));
-
-        if (progress < 1) {
-          requestAnimationFrame(animateScroll);
-        }
-      };
-
-      requestAnimationFrame(animateScroll);
     });
   }
 });

@@ -1,11 +1,8 @@
-/* -------------------------------------------------------------------------------------------------- */
-/* Général */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/* ============================================
+   GÉNÉRAL
+   ============================================ */
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #f8f8f8;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
   margin: 0;
@@ -16,22 +13,30 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
+}
 
+.aS {
+  text-decoration: none;
+  color: white;
+}
 
-
-/* -------------------------------------------------------------------------------------------------- */
-/* Header */
+/* ============================================
+   HEADER
+   ============================================ */
 
 header {
   background: url(img/Logo.png) fixed;
   background-color: #5b5963;
   background-size: cover;
-  background-position: center; /* Centre l'image horizontalement et verticalement */
+  background-position: center;
   min-height: 100vh;
   position: relative;
 }
 
-/* Désactiver "fixed" pour Safari uniquement */
+/* Safari fix */
 @supports (-webkit-touch-callout: none) {
   header {
     background-attachment: scroll;
@@ -52,41 +57,13 @@ header > div > strong {
   justify-content: center;
 }
 
-@media (max-width: 1245px) {
-  header > div {
-    top: 170px;
-  }
-  
-}
-
 header > div > strong > div {
   color: aliceblue;
   font-size: 30px;
 }
+
 .mainTitle {
   font-size: 100px;
-}
-
-@media (max-width: 800px) {
-  .mainTitle {
-    font-size: 50px;
-  }
-
-  header > div {
-    top: 255px;
-  }
-}
-
-@media (max-width: 625px) {
-  header > div {
-    top: 230px;
-  }
-}
-
-
-.aS {
-  text-decoration: none;
-  color: #1d597c;
 }
 
 .transition {
@@ -95,38 +72,55 @@ header > div > strong > div {
   background-color: #100e35;
 }
 
-.aS {
-  text-decoration: none;
-  color: white;
+.typing-text {
+  display: inline;
 }
 
-/* -------------------------------------------------------------------------------------------------- */
-/* Présentation */
-div > p {
-  font-size: 25px;
-  text-align: justify;
+.typing-cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  font-weight: 100;
+  margin-left: 2px;
 }
 
-#paragraphe {
-  width: 800px;
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
-#pres {
-  display: flex;
-  justify-content: center;
-  margin: 60px auto auto auto;
-  padding-bottom: 60px;
+/* ============================================
+   SECTIONS - STRUCTURE COMMUNE
+   ============================================ */
+
+#qui, #parc, #stage, #act, #skills {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-/* ===== TITRES DE SECTIONS MODERNES ===== */
-.contain {
+/* Sections blanc bleuté (1, 3, 5) */
+#qui, #parc, #act {
+  background: linear-gradient(180deg, #f0f4ff 0%, #e8eeff 100%);
+}
+
+/* Sections bleuté prononcé (2, 4) */
+#skills, #stage {
+  background: linear-gradient(180deg, #d8e4ff 0%, #c8d8ff 100%);
+}
+
+/* ============================================
+   SECTION HEADER (titre + label)
+   ============================================ */
+
+.section-header {
   position: relative;
   height: 175px;
   padding-top: 60px;
   overflow: hidden;
+  width: 100%;
 }
 
-.h2pres {
+.section-title {
   position: relative;
   top: 44%;
   font-size: clamp(28px, 5vw, 46px);
@@ -136,7 +130,7 @@ div > p {
   letter-spacing: -1px;
 }
 
-.h2pres::after {
+.section-title::after {
   content: '';
   display: block;
   width: 60px;
@@ -152,7 +146,7 @@ div > p {
   to { width: 60px; }
 }
 
-.qui {
+.section-label {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -166,178 +160,34 @@ div > p {
   letter-spacing: -3px;
 }
 
-@media (max-width: 900px) {
-  .contain {
-    height: 115px;
-    padding-top: 0;
-  }
-  #pres {
-    padding: 0;
-    margin: 30px auto 60px auto;
-    width: 100%;
-    max-width: 800px;
-    box-sizing: border-box;
-  }
-  #paragraphe {
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-}
+/* ============================================
+   SECTION CONTENT
+   ============================================ */
 
-@media (max-width: 600px) {
-  .contain {
-    height: 90px;
-    padding-top: 40px;
-  }
-}
-
-@media (max-width: 450px) {
-  .contain {
-    height: 70px;
-    padding-top: 40px;
-  }
-}
-
-/* -------------------------------------------------------------------------------------------------- */
-/* Section Parcours */
-.h2pres2 {
-  position: relative;
-  top: 44%;
-  font-size: clamp(28px, 5vw, 46px);
-  font-weight: 700;
-  text-align: center;
-  color: #292767;
-  letter-spacing: -1px;
-}
-
-.h2pres2::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #292767, #4a90e2);
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-.contain2 {
-  position: relative;
-  height: 175px;
-  padding-top: 60px;
+.section-content {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
-}
-
-.parc {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  font-size: clamp(80px, 15vw, 150px);
-  font-weight: 900;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(41, 39, 103, 0.1) 0%, rgba(41, 39, 103, 0.02) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -3px;
-}
-
-@media (max-width: 900px) {
-  .contain2 {
-    height: 115px;
-    padding-top: 0;
-  }
-  .card-container {
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-}
-
-@media (max-width: 600px) {
-  .contain2 {
-    height: 90px;
-    padding-top: 40px;
-  }
-}
-
-@media (max-width: 450px) {
-  .contain2 {
-    height: 70px;
-    padding-top: 40px;
-  }
-}
-
-/* -------------------------------------------------------------------------------------------------- */
-/* Section Réalisations */
-.contain3 {
   position: relative;
-  height: 175px;
-  padding-top: 60px;
-  overflow: hidden;
+  width: 100%;
+  margin: 60px auto;
+  padding-bottom: 60px;
 }
 
-.act {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  font-size: clamp(80px, 15vw, 150px);
-  font-weight: 900;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(41, 39, 103, 0.1) 0%, rgba(41, 39, 103, 0.02) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -3px;
+div > p {
+  font-size: 25px;
+  text-align: justify;
 }
 
-.h2pres3 {
-  position: relative;
-  top: 44%;
-  font-size: clamp(28px, 5vw, 46px);
-  font-weight: 700;
-  text-align: center;
-  color: #292767;
-  letter-spacing: -1px;
+#paragraphe {
+  width: 800px;
 }
 
-.h2pres3::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #292767, #4a90e2);
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
+/* ============================================
+   LIGNES DE SÉPARATION
+   ============================================ */
 
-.h2pres4 {
-  position: relative;
-  top: 44%;
-  font-size: clamp(28px, 5vw, 46px);
-  font-weight: 700;
-  text-align: center;
-  color: #292767;
-  letter-spacing: -1px;
-}
-
-.h2pres4::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #292767, #4a90e2);
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-/* Fond bleuté léger pour toutes les sections */
-#qui, #stage {
-  background: linear-gradient(180deg, #f0f4ff 0%, #e8eeff 100%);
-}
-
-/* Fond bleuté plus prononcé pour les sections alternées */
 .pair {
-  background: linear-gradient(180deg, #e0e8ff 0%, #d4dfff 100%);
   position: relative;
 }
 
@@ -354,29 +204,10 @@ div > p {
   border-radius: 2px;
 }
 
-.pair::before {
-  top: 0;
-}
+.pair::before { top: 0; }
+.pair::after { bottom: 0; }
 
-.pair::after {
-  bottom: 0;
-}
-
-/* Ligne de séparation entre Header et Qui suis-je */
-#qui::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  max-width: 800px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #292767, #4a90e2, #292767, transparent);
-  border-radius: 2px;
-}
-
-/* Ligne de séparation entre Parcours et Stage */
+#qui::before,
 #stage::before {
   content: '';
   position: absolute;
@@ -390,110 +221,192 @@ div > p {
   border-radius: 2px;
 }
 
-@media (max-width: 900px) {
-  .contain3 {
-    height: 115px;
-    padding-top: 0;
-  }
-}
+/* ============================================
+   GRILLE DE CARTES (.cards-grid)
+   ============================================ */
 
-@media (max-width: 600px) {
-  .contain3 {
-    height: 90px;
-    padding-top: 40px;
-  }
-}
-
-@media (max-width: 450px) {
-  .contain3 {
-    height: 70px;
-    padding-top: 40px;
-  }
-  
-  .h2pres::after,
-  .h2pres2::after,
-  .h2pres3::after,
-  .h2pres4::after {
-    width: 40px;
-    height: 3px;
-    margin-top: 8px;
-  }
-}
-
-
-/* Conteneur de cartes */
-.card-container {
-  padding: 30px 20px;
+.cards-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 1100px;
   gap: 30px;
 }
 
-/* Animations des cartes gérées par animation.css */
-
-
-@media (max-width: 900px) {
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-    
-  }
-  .card-container .card:last-child:nth-child(odd) {
-    grid-column: span 2;
-  }
-}
-@media (max-width: 700px) {
-  .card-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .card-container .card:last-child:nth-child(odd) {
-    grid-column: span 1;
-  }
+.cards-grid a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (max-width: 450px) {
-  .card {
-    padding-top: 0px;
-  }
+/* Variante: Skills (4 colonnes) */
+.cards-grid--skills {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
 }
 
-@media (min-width: 451px) {
-  .card {
-    padding-top: 20px;
-    
-  }
+/* Variante: Parcours (3 colonnes) */
+.cards-grid--parcours {
+  max-width: 1100px;
 }
 
-/* Card Stage */
-
-.card-containerS {
-  padding: 30px 20px;
+/* Variante: Stage (1 colonne verticale) */
+.cards-grid--stage {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 1000px;
   gap: 40px;
   text-align: center;
   align-items: center;
 }
 
-.card-descriptionS {
-  font-size: 1em;
-  color: #555;
-  flex-grow: 1;
-  text-align: left;
-  line-height: 1.8;
-  padding: 0 10px;
+/* Variante: Projects (3 colonnes) */
+.cards-grid--projects {
+  max-width: 1400px;
 }
 
-.card-descriptionS strong {
+/* ============================================
+   CARTE PARCOURS (.card)
+   ============================================ */
+
+.card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(41, 39, 103, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(41, 39, 103, 0.08);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #292767, #4a90e2, #292767);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+  z-index: 100;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
+}
+
+.imgCard {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.card:hover .imgCard {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #292767, #4a4a9e);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(41, 39, 103, 0.3);
+  z-index: 10;
+}
+
+.card-title {
+  margin: 15px 0 5px 0;
+  font-size: 1.4em;
+  color: #292767;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+}
+
+.card:hover .card-title {
+  transform: translateY(-3px);
+  color: #4a90e2;
+}
+
+.card-description {
+  font-size: 0.95em;
+  color: #555;
+  margin: 15px 20px;
+  flex-grow: 1;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.card-description b {
   color: #292767;
   font-weight: 600;
 }
 
+.card-btn {
+  margin-top: auto;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #292767 0%, #3d3a8a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(41, 39, 103, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.card-btn:hover::before {
+  left: 100%;
+}
+
+.card-btn:hover {
+  background: linear-gradient(135deg, #1a1850 0%, #292767 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(41, 39, 103, 0.35);
+}
+
+/* ============================================
+   CARTE STAGE (.cardS)
+   ============================================ */
+
 .cardS {
   background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
   border-radius: 20px;
-  padding: 0;
   box-shadow: 0 8px 32px rgba(41, 39, 103, 0.1);
   overflow: hidden;
   max-width: 900px;
@@ -610,6 +523,20 @@ div > p {
   gap: 6px;
 }
 
+.card-descriptionS {
+  font-size: 1em;
+  color: #555;
+  flex-grow: 1;
+  text-align: left;
+  line-height: 1.8;
+  padding: 0 10px;
+}
+
+.card-descriptionS strong {
+  color: #292767;
+  font-weight: 600;
+}
+
 .cardS-skills {
   display: flex;
   flex-wrap: wrap;
@@ -677,243 +604,62 @@ div > p {
   color: white;
 }
 
-@media (max-width: 900px) {
-  .cardS {
-    flex-direction: column;
-  }
-  
-  .cardS-image {
-    width: 100%;
-    min-width: auto;
-    padding: 25px;
-  }
-  
-  .cardS-image img {
-    max-width: 180px;
-  }
-  
-  .cardS::before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: auto;
-    width: 100%;
-    height: 5px;
-  }
-}
+/* ============================================
+   CARTE COMPÉTENCES (.skill-card)
+   ============================================ */
 
-@media (max-width: 500px) {
-  .IMGStage {
-    height: 20vh;
-  }
-}
-
-/* Style individuel d'une carte */
-/* Mise à jour de la classe .card */
-.card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+.skill-card {
+  background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(41, 39, 103, 0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  padding: 25px 20px;
   text-align: center;
+  box-shadow: 0 5px 20px rgba(41, 39, 103, 0.08);
+  border: 1px solid rgba(41, 39, 103, 0.05);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  align-items: center;
-  padding: 0;
-  position: relative;
-  cursor: pointer;
-  border: 1px solid rgba(41, 39, 103, 0.08);
+  cursor: default;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #292767, #4a90e2, #292767);
-  background-size: 200% 100%;
-  animation: shimmer 3s ease-in-out infinite;
-  z-index: 100;
-  pointer-events: none;
+.skill-card:hover .skill-icon img {
+  transform: scale(1.15) rotate(5deg);
 }
 
-.card:hover::before {
-  opacity: 1;
-}
-
-@keyframes shimmer {
-  0%, 100% { background-position: 200% 0; }
-  50% { background-position: -200% 0; }
-}
-
-.card .front {
-  width: 100%;
-  height: 100%;
+.skill-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.6s ease;
-  backface-visibility: hidden;
 }
 
-.card .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  transform: rotateY(180deg);
-  transition: transform 0.6s ease;
-  backface-visibility: hidden;
-  padding: 20px;
+.skill-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
 }
 
-.card:hover .front {
-  transform: rotateY(180deg);
-}
-
-.card:hover .back {
-  transform: rotateY(0);
-}
-
-.card-description {
-  font-size: 0.95em;
-  color: #555;
-  margin: 15px 20px;
-  flex-grow: 1;
-  text-align: left;
-  line-height: 1.6;
-}
-
-.card-description b {
+.skill-name {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 600;
   color: #292767;
-  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-.card-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: linear-gradient(135deg, #292767, #4a4a9e);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.75em;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  box-shadow: 0 2px 8px rgba(41, 39, 103, 0.3);
-  z-index: 10;
-}
-
-.ActivityCard {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-
-.actifityButton { 
-  padding: 10px;
-  background-color: #292767;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.actifityButton:hover {
-  background-color: #110f35;
-}
-
-.card-btn {
-  margin-top: auto;
-  margin-bottom: 20px;
+.skill-level {
   display: inline-block;
-  padding: 12px 28px;
-  background: linear-gradient(135deg, #292767 0%, #3d3a8a 100%);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 0.75em;
   font-weight: 500;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(41, 39, 103, 0.25);
-  position: relative;
-  overflow: hidden;
-}
-
-.card-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: 0.5s;
-}
-
-.card-btn:hover::before {
-  left: 100%;
-}
-
-.card-btn:hover {
-  background: linear-gradient(135deg, #1a1850 0%, #292767 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(41, 39, 103, 0.35);
-}
-
-.imgCard {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  transition: transform 0.5s ease, filter 0.3s ease;
-}
-
-.card:hover .imgCard {
-  transform: scale(1.05);
-  filter: brightness(1.05);
-}
-
-.card-title {
-  margin: 15px 0 5px 0;
-  font-size: 1.4em;
-  color: #292767;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  letter-spacing: -0.5px;
-}
-
-.card:hover .card-title {
-  transform: translateY(-3px);
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e8f0fe 0%, #d4e4ff 100%);
   color: #4a90e2;
 }
 
-/* Effet au survol */
-.card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(41, 39, 103, 0.15);
-  border-color: rgba(74, 144, 226, 0.3);
-}
-
-.cardS:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(41, 39, 103, 0.15);
-  border-color: rgba(74, 144, 226, 0.2);
+.skill-card:hover .skill-level {
+  background: linear-gradient(135deg, #292767 0%, #4a90e2 100%);
+  color: white;
 }
 
 /* ============================================
@@ -924,7 +670,6 @@ footer {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: white;
   padding: 60px 0 0 0;
-  margin-top: 0;
   position: relative;
   overflow: hidden;
 }
@@ -948,14 +693,6 @@ footer::before {
   gap: 50px;
 }
 
-@media (max-width: 900px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-}
-
 .footer-section h3,
 .footer-section h4 {
   margin-bottom: 20px;
@@ -977,7 +714,6 @@ footer::before {
   font-weight: 500;
 }
 
-
 .footer-section h4 {
   font-size: 1.2em;
   color: white;
@@ -990,12 +726,6 @@ footer::before {
   height: 3px;
   background: linear-gradient(90deg, #4a90e2, transparent);
   margin-top: 10px;
-}
-
-@media (max-width: 900px) {
-  .footer-section h4::after {
-    margin: 10px auto 0;
-  }
 }
 
 .footer-links {
@@ -1014,21 +744,9 @@ footer::before {
   padding: 8px 0;
 }
 
-@media (max-width: 900px) {
-  .footer-link {
-    justify-content: center;
-  }
-}
-
 .footer-link:hover {
   color: #4a90e2;
   transform: translateX(5px);
-}
-
-@media (max-width: 900px) {
-  .footer-link:hover {
-    transform: translateX(0) scale(1.05);
-  }
 }
 
 .footer-link svg {
@@ -1038,12 +756,6 @@ footer::before {
 .footer-social {
   display: flex;
   gap: 15px;
-}
-
-@media (max-width: 900px) {
-  .footer-social {
-    justify-content: center;
-  }
 }
 
 .social-btn {
@@ -1116,128 +828,6 @@ footer::before {
   box-shadow: 0 8px 30px rgba(41, 39, 103, 0.5);
 }
 
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
-  }
-}
-
-/* ============================================
-   EFFET TYPING
-   ============================================ */
-
-.typing-text {
-  display: inline;
-}
-
-.typing-cursor {
-  display: inline-block;
-  animation: blink 0.8s infinite;
-  font-weight: 100;
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-
-/* ============================================
-   SECTION COMPÉTENCES
-   ============================================ */
-
-#skills {
-  padding-bottom: 60px;
-}
-
-.skills-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 30px;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-@media (max-width: 1000px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-}
-
-.skill-card {
-  background: white;
-  border-radius: 16px;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: 0 5px 20px rgba(41, 39, 103, 0.08);
-  border: 1px solid rgba(41, 39, 103, 0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(41, 39, 103, 0.15);
-  border-color: rgba(74, 144, 226, 0.3);
-}
-
-.skill-card:hover .skill-icon img {
-  transform: scale(1.15) rotate(5deg);
-}
-
-.skill-icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skill-icon img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-.skill-name {
-  display: block;
-  font-size: 1.1em;
-  font-weight: 600;
-  color: #292767;
-  margin-bottom: 8px;
-}
-
-.skill-level {
-  display: inline-block;
-  font-size: 0.75em;
-  font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #e8f0fe 0%, #d4e4ff 100%);
-  color: #4a90e2;
-}
-
-.skill-card:hover .skill-level {
-  background: linear-gradient(135deg, #292767 0%, #4a90e2 100%);
-  color: white;
-}
-
 /* ============================================
    BARRE DE PROGRESSION SCROLL
    ============================================ */
@@ -1291,18 +881,8 @@ footer::before {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .dark-mode-toggle {
-    top: auto;
-    bottom: 90px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
 /* ============================================
-   DARK MODE STYLES
+   DARK MODE
    ============================================ */
 
 body.dark-mode {
@@ -1314,106 +894,66 @@ body.dark-mode .dark-mode-toggle {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .dark-mode-toggle .sun-icon {
-  display: none;
-}
+body.dark-mode .dark-mode-toggle .sun-icon { display: none; }
+body.dark-mode .dark-mode-toggle .moon-icon { display: block; }
 
-body.dark-mode .dark-mode-toggle .moon-icon {
-  display: block;
-}
-
-/* Sections fond sombre uni */
+/* Sections fond sombre (1, 3, 5) */
 body.dark-mode #qui,
 body.dark-mode #parc,
 body.dark-mode #act {
   background: #0f0f1a !important;
 }
 
-/* Sections fond gradient (alternance) */
+/* Sections fond gradient plus clair (2, 4) */
 body.dark-mode #skills,
 body.dark-mode #stage {
   background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
 }
 
-body.dark-mode .skills-container {
-  background-color: transparent;
+body.dark-mode .section-title { color: #fff; }
+
+body.dark-mode .section-label {
+  background: linear-gradient(180deg, rgba(150, 180, 255, 0.25) 0%, rgba(150, 180, 255, 0.08) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-body.dark-mode .pair {
-  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
-}
+body.dark-mode #paragraphe { color: rgba(255, 255, 255, 0.8); }
 
-body.dark-mode .card-container,
-body.dark-mode .card-containerS,
-body.dark-mode .containerCard,
-body.dark-mode .skills-grid {
-  background: transparent;
-}
-
-body.dark-mode .h2pres,
-body.dark-mode .h2pres2,
-body.dark-mode .h2pres3 {
-  color: #fff;
-}
-
-body.dark-mode .qui,
-body.dark-mode .parc,
-body.dark-mode .act {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-body.dark-mode #paragraphe {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-body.dark-mode #pres {
-  background: transparent;
-}
-
-body.dark-mode .card {
-  background: #1e1e2e !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .card-title {
-  color: #fff;
-}
-
-body.dark-mode .card-description {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-body.dark-mode .card-badge {
-  background: linear-gradient(135deg, #4a90e2 0%, #292767 100%);
-}
-
-body.dark-mode .cardS {
-  background: #1e1e2e !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .cardS-title {
-  color: #fff;
-}
-
-body.dark-mode .card-descriptionS {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-body.dark-mode .cardS-meta span {
-  color: rgba(255, 255, 255, 0.6);
-}
-
+body.dark-mode .card,
+body.dark-mode .cardS,
 body.dark-mode .skill-card {
   background: #1e1e2e !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-mode .skill-name {
-  color: #fff;
+body.dark-mode .card-title,
+body.dark-mode .cardS-title,
+body.dark-mode .skill-name { color: #fff; }
+
+body.dark-mode .card-description,
+body.dark-mode .card-descriptionS { color: rgba(255, 255, 255, 0.7); }
+
+body.dark-mode .cardS-meta span { color: rgba(255, 255, 255, 0.6); }
+
+body.dark-mode .imgCard,
+body.dark-mode .cardS-image { background: #292767; }
+
+body.dark-mode .cardS-skill {
+  background: rgba(74, 144, 226, 0.2);
+  color: #4a90e2;
+}
+
+body.dark-mode .card-badge,
+body.dark-mode .cardS-badge {
+  background: linear-gradient(135deg, #4a90e2, #292767);
+}
+
+body.dark-mode .card-btn,
+body.dark-mode .cardS-btn {
+  background: linear-gradient(135deg, #4a90e2 0%, #292767 100%);
+  color: white;
 }
 
 body.dark-mode .skill-level {
@@ -1426,32 +966,168 @@ body.dark-mode .cardActi {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .cardActi-content {
-  background: transparent;
-}
-
 body.dark-mode .cardActi-project {
   background: linear-gradient(135deg, #292767 0%, #1e1e2e 100%);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .project-name {
-  color: #fff;
-}
-
-body.dark-mode .project-desc {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-body.dark-mode .cardActi-footer {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode .cardActi-count {
-  color: rgba(255, 255, 255, 0.6);
-}
+body.dark-mode .project-name { color: #fff; }
+body.dark-mode .project-desc { color: rgba(255, 255, 255, 0.6); }
+body.dark-mode .cardActi-footer { border-color: rgba(255, 255, 255, 0.1); }
+body.dark-mode .cardActi-count { color: rgba(255, 255, 255, 0.6); }
 
 body.dark-mode .back-to-top {
   background: linear-gradient(135deg, #4a90e2 0%, #292767 100%);
 }
 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1200px) {
+  header > div { top: 170px; }
+  
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .cards-grid--skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .section-header {
+    height: 115px;
+    padding-top: 0;
+  }
+  
+  .section-content {
+    padding: 0;
+    margin: 30px auto 60px auto;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  #paragraphe {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .cards-grid {
+    padding: 0 20px;
+  }
+  
+  .cards-grid--parcours {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cards-grid--parcours .card:last-child:nth-child(odd) {
+    grid-column: span 2;
+  }
+  
+  .cardS {
+    flex-direction: column;
+  }
+  
+  .cardS-image {
+    width: 100%;
+    min-width: auto;
+    padding: 25px;
+  }
+  
+  .cardS-image img { max-width: 180px; }
+  
+  .cardS::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 5px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .footer-section h4::after { margin: 10px auto 0; }
+  .footer-link { justify-content: center; }
+  .footer-link:hover { transform: scale(1.05); }
+  .footer-social { justify-content: center; }
+}
+
+@media (max-width: 800px) {
+  .mainTitle { font-size: 50px; }
+  header > div { top: 255px; }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .dark-mode-toggle {
+    top: auto;
+    bottom: 90px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .cards-grid--skills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .cards-grid--parcours {
+    grid-template-columns: 1fr;
+  }
+  
+  .cards-grid--parcours .card:last-child:nth-child(odd) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 625px) {
+  header > div { top: 230px; }
+}
+
+@media (max-width: 600px) {
+  .section-header {
+    height: 90px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .IMGStage { height: 20vh; }
+}
+
+@media (max-width: 450px) {
+  .section-header {
+    height: 70px;
+    padding-top: 40px;
+  }
+  
+  .section-title::after {
+    width: 40px;
+    height: 3px;
+    margin-top: 8px;
+  }
+}

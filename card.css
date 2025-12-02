@@ -1,29 +1,7 @@
-/* ===== CONTAINER DES CARTES PROJETS ===== */
-.containerCard {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 80px;
-}
+/* ============================================
+   CARTE PROJET (.cardActi)
+   ============================================ */
 
-@media (max-width: 1200px) {
-  .containerCard {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .containerCard {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-}
-
-/* ===== CARTE PROJET ===== */
 .cardActi {
   position: relative;
   background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
@@ -32,25 +10,14 @@
   box-shadow: 0 10px 40px rgba(41, 39, 103, 0.1);
   border: 1px solid rgba(41, 39, 103, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  opacity: 0;
-  transform: translateY(50px);
   display: flex;
   flex-direction: column;
 }
 
-.cardActi.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ============================================
+   HEADER DE LA CARTE
+   ============================================ */
 
-
-.cardActi:hover {
-  transform: scale(1.03);
-  box-shadow: 0 20px 50px rgba(41, 39, 103, 0.18);
-  border-color: rgba(74, 144, 226, 0.25);
-}
-
-/* ===== HEADER DE LA CARTE ===== */
 .cardActi-header {
   position: relative;
   padding: 25px;
@@ -116,7 +83,10 @@
   font-weight: 400;
 }
 
-/* ===== CONTENU DE LA CARTE ===== */
+/* ============================================
+   CONTENU DE LA CARTE
+   ============================================ */
+
 .cardActi-content {
   padding: 25px;
   flex: 1;
@@ -124,7 +94,10 @@
   flex-direction: column;
 }
 
-/* ===== LISTE DES PROJETS ===== */
+/* ============================================
+   LISTE DES PROJETS
+   ============================================ */
+
 .cardActi-projects {
   display: flex;
   flex-direction: column;
@@ -204,7 +177,10 @@
   transition: all 0.3s ease;
 }
 
-/* ===== FOOTER DE LA CARTE ===== */
+/* ============================================
+   FOOTER DE LA CARTE
+   ============================================ */
+
 .cardActi-footer {
   padding: 20px 25px;
   border-top: 1px solid rgba(41, 39, 103, 0.08);
@@ -259,7 +235,7 @@
   transition: all 0.3s ease;
 }
 
-/* Au hover du footer, toutes les pastilles s'agrandissent */
+/* Hover footer - pastilles s'agrandissent */
 .cardActi-footer:hover .tech-dot {
   padding: 6px 14px;
   min-width: auto;
@@ -270,12 +246,13 @@
   font-size: 0.75em;
 }
 
-/* Délai d'animation en cascade */
+/* Délai cascade */
 .cardActi-footer:hover .tech-dot:nth-child(1) { transition-delay: 0s; }
 .cardActi-footer:hover .tech-dot:nth-child(2) { transition-delay: 0.05s; }
 .cardActi-footer:hover .tech-dot:nth-child(3) { transition-delay: 0.1s; }
 .cardActi-footer:hover .tech-dot:nth-child(4) { transition-delay: 0.15s; }
 
+/* Couleurs des technologies */
 .tech-dot.web { background: linear-gradient(135deg, #f97316, #ea580c); }
 .tech-dot.java { background: linear-gradient(135deg, #ef4444, #dc2626); }
 .tech-dot.flutter { background: linear-gradient(135deg, #3b82f6, #2563eb); }
@@ -284,11 +261,9 @@
 .tech-dot.js { background: linear-gradient(135deg, #eab308, #ca8a04); }
 .tech-dot.dart { background: linear-gradient(135deg, #06b6d4, #0891b2); }
 
-/* ===== ANCIEN CSS (compatibilité) ===== */
-.containerCard a {
-  text-decoration: none;
-  color: inherit;
-}
+/* ============================================
+   UTILITAIRES
+   ============================================ */
 
 .imgCards {
   width: 100%;
