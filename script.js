@@ -19,6 +19,109 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================
+// BOUTON RETOUR EN HAUT
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('backToTop');
+  
+  if (backToTopBtn) {
+    // Afficher/masquer le bouton au scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Remonter en haut au clic avec animation smooth
+    backToTopBtn.addEventListener('click', () => {
+      const scrollDuration = 800; // Durée en ms
+      const scrollStart = window.scrollY;
+      const startTime = performance.now();
+
+      const animateScroll = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / scrollDuration, 1);
+        
+        // Easing function (ease-out cubic)
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        
+        window.scrollTo(0, scrollStart * (1 - easeOut));
+
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+
+      requestAnimationFrame(animateScroll);
+    });
+  }
+});
+
+// ============================================
+// BARRE DE PROGRESSION SCROLL
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollProgress = document.getElementById('scrollProgress');
+  
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+  }
+});
+
+// ============================================
+// DARK MODE TOGGLE
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  
+  if (darkModeToggle) {
+    // Vérifier si le dark mode était activé précédemment
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      
+      // Sauvegarder la préférence
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+    });
+  }
+});
+
+// ============================================
+// EFFET TYPING SUR LE HEADER
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  const typingElement = document.getElementById('typingText');
+  const textToType = "Je m'appelle Camille Mory";
+  let charIndex = 0;
+  
+  if (typingElement) {
+    // Délai avant de commencer l'animation
+    setTimeout(() => {
+      const typeChar = () => {
+        if (charIndex < textToType.length) {
+          typingElement.textContent += textToType.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeChar, 80); // Vitesse de frappe
+        }
+      };
+      typeChar();
+    }, 500); // Délai initial
+  }
+});
+
+// ============================================
 // ANIMATIONS AU SCROLL - IntersectionObserver
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -69,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sélectionner et observer les éléments
   const titles = document.querySelectorAll('.animationTitle');
   const contents = document.querySelectorAll('.animationContent');
-  const cards = document.querySelectorAll('.card, .cardS, .cardActi');
+  const cards = document.querySelectorAll('.card, .cardS, .cardActi, .skill-card');
 
   console.log('Titres trouvés:', titles.length);
   console.log('Contenus trouvés:', contents.length);
