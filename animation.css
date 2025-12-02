@@ -1,40 +1,12 @@
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+/* ============================================
+   ANIMATIONS D'ENTRÉE - Portfolio
+   ============================================ */
 
-@keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
+/* Keyframes pour header et navbar */
 @keyframes fadeInBottom {
-    from {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-@keyframes fadeInTop {
   from {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -42,58 +14,142 @@
   }
 }
 
-.animation {
-    animation: fadeInBottom ease 1s;
+@keyframes fadeInTopNav {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px);
   }
-
-.animationNav {
-  animation: fadeInTop ease 1s;
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
+/* ============================================
+   HEADER & NAVBAR (animations automatiques)
+   ============================================ */
+
+.animation {
+  animation: fadeInBottom 0.8s ease-out forwards;
+}
+
+.animationNav {
+  animation: fadeInTopNav 0.8s ease-out forwards;
+}
+
+/* ============================================
+   TITRES DE SECTION (transitions au scroll)
+   ============================================ */
+
 .animationTitle {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 1s ease;
-    will-change: transform, opacity;
-    position: relative;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .animationTitle.animate {
-    animation: fadeInRight ease 1s forwards;
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
+/* ============================================
+   CONTENU DE SECTION (transitions au scroll)
+   ============================================ */
+
 .animationContent {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s ease;
-    will-change: transform, opacity;
-    position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition-delay: 0.15s;
 }
 
 .animationContent.animate {
-    animation: fadeInLeft ease 1s forwards;
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* Ajout des classes pour les sections parentes */
+/* ============================================
+   CARTES (transitions au scroll avec cascade)
+   ============================================ */
+
+.card-container .card,
+.card-containerS .cardS,
+.containerCard .cardActi {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card-container .card.animate,
+.card-containerS .cardS.animate,
+.containerCard .cardActi.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Délais échelonnés pour effet cascade */
+.card-container .card:nth-child(1),
+.card-containerS .cardS:nth-child(1),
+.containerCard .cardActi:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.card-container .card:nth-child(2),
+.card-containerS .cardS:nth-child(2),
+.containerCard .cardActi:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.card-container .card:nth-child(3),
+.card-containerS .cardS:nth-child(3),
+.containerCard .cardActi:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.card-container .card:nth-child(4),
+.card-containerS .cardS:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+/* ============================================
+   CONTENEURS
+   ============================================ */
+
 #qui, #parc, #stage, #act {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-/* Conteneurs des animations */
 .contain, .contain2, .contain3 {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 #pres {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
+
+/* ============================================
+   HOVER CARTES
+   ============================================ */
+
+.card:hover {
+  transform: translateY(-5px) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.cardS:hover {
+  transform: scale(1.03) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.cardActi.animate:hover {
+  transform: scale(1.03) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Accessibilité désactivée temporairement pour test */

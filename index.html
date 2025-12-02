@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="animation.css" />
   <link rel="stylesheet" href="card.css" />
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <title>Portfolio Mory Camille</title>
   <link rel="icon" href="img/Favicon.png" type="image/x-icon" />
 </head>
@@ -48,8 +48,6 @@
         <a href="#parc">Parcours</a>
         <a href="#stage">Stage</a>
         <a href="#act">Réalisation</a>
-        <a href="veille.html">Veille</a>
-        <a href="pdf/Competences.pdf" target="_blank">Compétences</a>
         <a href="pdf/CV_Camille.pdf" target="_blank">Mon CV</a>
       </div>
     </div>
@@ -67,7 +65,6 @@
         <li><a href="#parc">Parcours</a></li>
         <li><a href="#stage">Stage</a></li>
         <li><a href="#act">Réalisation</a></li>
-        <li><a href="veille.html">Veille</a></li>
         <li><a href="pdf/Competences.pdf" target="_blank">Compétences</a></li>
         <li><a href="pdf/CV_Camille.pdf" target="_blank">Mon CV</a></li>
       </div>
@@ -105,32 +102,37 @@
     <div id="pres" class="animationContent">
       <div class="card-container">
         <div class="card">
-          <img src="img/BTS.png" alt="Image 1" class="imgCard" />
-          <h3 class="card-title">BTS 2023-2025</h3>
+          <span class="card-badge">Diplômé</span>
+          <img src="img/BTS.png" alt="BTS SIO" class="imgCard" />
+          <h3 class="card-title">BTS SIO SLAM</h3>
           <p class="card-description">
-            <b>Lycée Dominique Villars GAP</b><br />
-            <b>Formation :</b> BTS SIO<br />
-            <b>Spécialité :</b> SLAM
+            <b>📍 Lycée Dominique Villars</b> — Gap<br />
+            <b>📅 2023 - 2025</b><br />
+            <b>🎯 Spécialité :</b> Solutions Logicielles et Applications Métiers
           </p>
-          <a target="_blank" href="pdf/ResumeBTS.pdf" class="aS"><button class="card-btn">Voir Plus</button></a>
+          <a target="_blank" href="pdf/ReleveNoteBTS.pdf" class="aS"><button class="card-btn">Découvrir →</button></a>
         </div>
         <div class="card">
-          <img src="img/pix.png" alt="Image 1" class="imgCard" />
-          <h3 class="card-title">PIX 2024</h3>
+          <span class="card-badge">Certifié</span>
+          <img src="img/pix.png" alt="Certification PIX" class="imgCard" />
+          <h3 class="card-title">Certification PIX</h3>
           <p class="card-description">
-            <b>Certification :</b> 605 points
+            <b>🏆 Score :</b> 605 points<br />
+            <b>📅 2024</b><br />
+            <b>💡</b> Compétences numériques validées
           </p>
-          <a target="_blank" href="pdf/Pix.pdf" class="aS"><button class="card-btn">Voir Plus</button></a>
+          <a target="_blank" href="pdf/Pix.pdf" class="aS"><button class="card-btn">Voir le certificat →</button></a>
         </div>
         <div class="card">
-          <img src="img/Bac.png" alt="Image 1" class="imgCard" />
-          <h3 class="card-title">Baccalauréat 2023</h3>
+          <span class="card-badge">Mention AB</span>
+          <img src="img/Bac.png" alt="Baccalauréat" class="imgCard" />
+          <h3 class="card-title">Baccalauréat Général</h3>
           <p class="card-description">
-            <b>Lycée Saint-Joseph GAP</b><br />
-            <b>Spécialités</b> : Maths, NSI<br />
-            <b>Mention</b> : Assez Bien
+            <b>📍 Lycée Saint-Joseph</b> — Gap<br />
+            <b>📅 2023</b><br />
+            <b>🎯 Spécialités :</b> Mathématiques, NSI
           </p>
-          <a target="_blank" href="pdf/Bac.pdf" class="aS"><button class="card-btn">Voir Plus</button></a>
+          <a target="_blank" href="pdf/Bac.pdf" class="aS"><button class="card-btn">Voir le diplôme →</button></a>
         </div>
       </div>
     </div>
@@ -143,67 +145,71 @@
     </div>
     <div id="pres" class="animationContent">
       <div class="card-containerS">
+        <!-- Ixcys - Alternance -->
         <div class="cardS">
-          <div style="width: 320px;">
-            <img src="img/ixcys.png" alt="Ixcys" style="width: 320px;" />
+          <div class="cardS-image">
+            <img src="img/ixcys.png" alt="Ixcys" />
           </div>
-          <div class="card-descriptionS">
-            Je suis actuellement en <strong>alternance</strong> au sein de l'entreprise <strong>Ixcys</strong>,
-            <br />depuis le <strong>1er septembre 2025</strong>.
-            <br /><br />
-            Dans le cadre de ma 3ème année de Bachelor Développement, je développe des applications en <strong>C#</strong>, 
-            notamment une application Écran de cuisine et un système de Caisse.
-            Cette expérience me permet de consolider mes compétences en développement et de travailler 
-            sur des projets concrets en entreprise.
-            <br /><br />
-          </div>
-          <div>
+          <div class="cardS-content">
+            <div class="cardS-header">
+              <h3 class="cardS-title">Ixcys</h3>
+              <span class="cardS-badge alternance">Alternance</span>
+            </div>
+            <div class="cardS-meta">
+              <span>📍 France</span>
+              <span>📅 Depuis Sept. 2025</span>
+              <span>🎓 Bachelor 3ème année</span>
+            </div>
+            <div class="card-descriptionS">
+              Développement d'applications métiers en <strong>C#</strong> : application Écran de cuisine 
+              et système de Caisse. Cette alternance me permet de consolider mes compétences 
+              en développement et de travailler sur des projets concrets en entreprise.
+            </div>
+            <div class="cardS-skills">
+              <span class="cardS-skill">C#</span>
+              <span class="cardS-skill">.NET</span>
+              <span class="cardS-skill">WPF</span>
+              <span class="cardS-skill">SQL Server</span>
+            </div>
+            <div class="cardS-buttons">
+            </div>
           </div>
         </div>
-        <div class="cardS">
-          <div style="width: 320px;">
-            <img src="img/7pizza.png" alt="Image 1" style="width: 320px;" />
-          </div>
-          <div class="card-descriptionS">
-            Ce stage a été réalisé au sein de l'entreprise <strong>7pizza</strong>, située à <strong>GAP</strong>,
-            <br />du <strong>27/05/2024</strong> au <strong>07/07/2024</strong>.
-            <br /><br />
-            Il avait pour objectif de mettre en pratique les compétences acquises durant ma formation en BTS SIO, avec
-            pour projet la réalisation et l'hébergement d'un site web.
-            J'ai notamment appris à maîtriser le <strong>responsive design</strong>, une notion que je ne comprenais pas
-            bien avant ce stage.
-            J'ai également appris à utiliser <strong>OVH</strong> pour l'hébergement du site web.
-            <br /><br />
 
-          </div>
-          <div>
-            <a href="pdf/CPTRendu.pdf" target="_blank" class="aS"><button class="card-btn">Rapport Journalier</button></a>
-            <a href="http://pizzagap.cluster003.ovh.net" target="_blank" class="aS"><button
-                class="card-btn">Site</button></a>
-          </div>
-        </div>
+        <!-- Alp'Cloud - Stage -->
         <div class="cardS">
-          <div style="width: 320px;">
-            <img src="img/Alp'Cloud.png" alt="Image 1" style="width: 320px;" />
+          <div class="cardS-image">
+            <img src="img/Alp'Cloud.png" alt="Alp'Cloud" />
           </div>
-          <div class="card-descriptionS">
-            Ce stage a été réalisé au sein de l'entreprise
-            <strong>Alp'Cloud</strong> située dans les <strong>Alpes du Sud</strong>
-            <br /> du <strong>06/01/2025</strong> au <strong>07/02/2025</strong>.
-            <br /><br />
-            Il avait pour objectif la création d'une plateforme de gestion de VPS ainsi que d'un Back-Office permettant d'ajouter du contenu à la plateforme principale.
-            Durant ce stage, j'ai pu consolider mes compétences en développement web avec les langages <b>PHP, HTML, CSS, JS</b>
-            et j'ai découvert l'environnement d'une entreprise dans le domaine de l'informatique.
-            J'ai appris à travailler en équipe, à respecter les délais et à utiliser des outils tels que <b>GIT, Mattermost, Proxmox, etc.</b>
-            <br /><br />
-          </div>
-          <div>
-            <a href="pdf/CPTRendu2.pdf" target="_blank" class="aS"><button class="card-btn">Rapport Journalier</button></a>
-            <a href="pdf/Doc_UtilisateurAlpcloud.pdf" target="_blank" class="aS"><button class="card-btn">Doc
-                Utilisateur</button></a>
+          <div class="cardS-content">
+            <div class="cardS-header">
+              <h3 class="cardS-title">Alp'Cloud</h3>
+              <span class="cardS-badge">Stage</span>
+            </div>
+            <div class="cardS-meta">
+              <span>📍 Alpes du Sud</span>
+              <span>📅 Janv. - Fév. 2025</span>
+              <span>⏱️ 5 semaines</span>
+            </div>
+            <div class="card-descriptionS">
+              Création d'une <strong>plateforme de gestion de VPS</strong> ainsi qu'un Back-Office 
+              pour l'administration du contenu. Découverte de l'environnement professionnel IT, 
+              travail en équipe et utilisation d'outils collaboratifs.
+            </div>
+            <div class="cardS-skills">
+              <span class="cardS-skill">PHP</span>
+              <span class="cardS-skill">HTML/CSS</span>
+              <span class="cardS-skill">JavaScript</span>
+              <span class="cardS-skill">Git</span>
+              <span class="cardS-skill">Proxmox</span>
+              <span class="cardS-skill">Mattermost</span>
+            </div>
+            <div class="cardS-buttons">
+              <a href="pdf/CPTRendu2.pdf" target="_blank" class="cardS-btn">📄 Rapport</a>
+              <a href="pdf/Doc_UtilisateurAlpcloud.pdf" target="_blank" class="cardS-btn secondary">📘 Documentation</a>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <div id="act" class="pair">
@@ -213,108 +219,144 @@
       <div class="h2pres3">Réalisation</div>
     </div>
     <div class="containerCard">
+      <!-- Carte Web -->
       <div class="cardActi">
-        <div class="face face1">
-          <div class="content">
-            <div class="icon">
-              <img src="img/Web.png" alt="Image 1" class="imgCards" />
-              <div class="arrow-down"></div>
-            </div>
-            <div class="project-description">
-              <p id="portfolio">
-                <b>Site web Portfolio</b> :<br> 
-                - Présentation de mes réalisations, compétences et parcours.
-              </p>
-              <p id="GSBWEB">
-                <b>Web-App GSB WEB</b> :<br> 
-                - Application web de gestion de notes de frais liée à GSB APP<br> 
-                - Utilisateurs peuvent créer et gérer leurs notes de frais<br> 
-                - Comptable peut accepter ou refuser les notes de frais<br> 
-                - Administrateur peut gérer les utilisateurs.
-              </p>
-              <p id="AlpCloud">
-                <b>Web-App Alp'Cloud</b> :<br>  
-                - Permet aux utilisateurs de gérer leurs VPS (backups, snapshots, performances, démarrage, etc.) et de suivre les actualités de l'entreprise<br> 
-                - Back-Office permettant à l'administrateur d'ajouter du contenu à la plateforme principale.
-              </p>
-              <p id="7Pizza">
-                <b>Site Web 7Pizza</b> :<br> 
-                - Présentation de l'entreprise, de ses produits, de ses actualités et de son emplacement<br> 
-                - Permet aux utilisateurs de passer commande et de suivre leur livraison.
-              </p>
-            </div>
+        <div class="cardActi-header">
+          <div class="cardActi-icon">
+            <img src="img/Web.png" alt="Web" />
+          </div>
+          <div class="cardActi-title">
+            <h3>Développement Web</h3>
+            <span>Sites & Applications Web</span>
           </div>
         </div>
-        <div class="face face2">
-          <div class="content">
-            <a href="#" class="contentButton" id="portfolio">Portfolio</a>
-            <a target="_blank" href="pdf/AP-GSB-MORY-RUGGERI-SLAM.pdf" class="contentButton" id="GSBWEB">GSB WEB</a>
-            <a target="_blank" href="pdf/Visuel-Stage-2.pdf" class="contentButton" id="AlpCloud">Alp'Cloud</a>
-            <a target="_blank" href="http://pizzagap.cluster003.ovh.net" class="contentButton" id="7Pizza">7Pizza</a>
+        <div class="cardActi-content">
+          <div class="cardActi-projects">
+            <a href="#" class="cardActi-project">
+              <div class="project-icon">🌐</div>
+              <div class="project-info">
+                <div class="project-name">Portfolio</div>
+                <div class="project-desc">Site vitrine personnel</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
+            <a href="pdf/AP-GSB-MORY-RUGGERI-SLAM.pdf" target="_blank" class="cardActi-project">
+              <div class="project-icon">💼</div>
+              <div class="project-info">
+                <div class="project-name">GSB WEB</div>
+                <div class="project-desc">Gestion de notes de frais</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
+            <a href="pdf/Visuel-Stage-2.pdf" target="_blank" class="cardActi-project">
+              <div class="project-icon">☁️</div>
+              <div class="project-info">
+                <div class="project-name">Alp'Cloud</div>
+                <div class="project-desc">Plateforme de gestion VPS</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="cardActi">
-        <div class="face face1">
-          <div class="content">
-            <div class="icon">
-              <img src="img/Java.png" alt="Image 1" class="imgCards" />
-              <div class="arrow-down"></div>
-            </div>
-            <div class="project-description">
-              <p id="M2L">
-                <b>M2L</b> :<br> 
-                - Application de gestion de ligue de sport.<br> 
-                - Gestion et visualisation des équipes, joueurs, compétitions.
-              </p>
-              <p id="BatailleNavale">
-                <b>Bataille Navale</b> :<br> 
-                - Jeu de bataille navale contre un ordinateur dans le terminal, avec affichage du tableau de jeu.
-              </p>
-              <p id="Shifumi">
-                <b>Shifumi</b> :<br> 
-                - Jeu de shifumi contre un ordinateur dans le terminal.<br> 
-                - Mode basique : choix entre pierre, feuille, ciseaux.<br> 
-                - Mode avancé : choix entre pierre, feuille, ciseaux, puits.
-              </p>
-            </div>
+        <div class="cardActi-footer">
+          <div class="cardActi-count">
+            <span>3</span> projets
           </div>
-        </div>
-        <div class="face face2">
-          <div class="content">
-            <a target="_blank" href="pdf/DOCUMENTATION_UTILISATEUR.pdf" class="contentButton" id="M2L">M2L</a>
-            <a target="_blank" href="pdf/B1_BatailleNavale_G2_Mory_Camille.pdf" class="contentButton" id="BatailleNavale">Bataille
-              Navale</a>
-            <a target="_blank" href="pdf/B1_TP_Shifumi_G2_Mory_Camille.pdf" class="contentButton" id="Shifumi">Shifumi</a>
+          <div class="cardActi-tech">
+            <div class="tech-dot web"><span>HTML/CSS</span></div>
+            <div class="tech-dot php"><span>PHP</span></div>
+            <div class="tech-dot js"><span>JavaScript</span></div>
           </div>
         </div>
       </div>
 
+      <!-- Carte Java -->
       <div class="cardActi">
-        <div class="face face1">
-          <div class="content">
-            <div class="icon">
-              <img src="img/flutter-bandeau.png" alt="Image 1" class="imgCards" />
-              <div class="arrow-down"></div>
-            </div>
-            <div class="project-description">
-              <p id="GSBAPP">
-                <b>GSB APP</b> :<br> 
-                - Application mobile pour la gestion de notes de frais, liée au site web GSB WEB.<br> 
-                - Permet à l'utilisateur de créer et gérer ses notes de frais (NDF).
-              </p>
-              <p id="NatureEmoi">
-                <b>Nature'Emoi</b> :<br> 
-                - Application mobile permettant l'affichage de plantes et de leurs descriptions.<br> 
-                - Permet à l'utilisateur de créer une plante, d'ajouter des plantes en favoris, de les consulter et de les supprimer.
-              </p>
-            </div>
+        <div class="cardActi-header">
+          <div class="cardActi-icon">
+            <img src="img/Java.png" alt="Java" />
+          </div>
+          <div class="cardActi-title">
+            <h3>Développement Java</h3>
+            <span>Applications Desktop</span>
           </div>
         </div>
-        <div class="face face2">
-          <div class="content">
-            <a target="_blank" href="pdf/AP-GSB-MORY-RUGGERI-SLAM.pdf" class="contentButton" id="GSBAPP">GSB APP</a>
-            <a target="_blank" href="pdf/Nature'Emoi.pdf" class="contentButton" id="NatureEmoi">Nature'Emoi</a>
+        <div class="cardActi-content">
+          <div class="cardActi-projects">
+            <a href="pdf/DOCUMENTATION_UTILISATEUR.pdf" target="_blank" class="cardActi-project">
+              <div class="project-icon">🏆</div>
+              <div class="project-info">
+                <div class="project-name">M2L</div>
+                <div class="project-desc">Gestion de ligues sportives</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
+            <a href="pdf/B1_BatailleNavale_G2_Mory_Camille.pdf" target="_blank" class="cardActi-project">
+              <div class="project-icon">🚢</div>
+              <div class="project-info">
+                <div class="project-name">Bataille Navale</div>
+                <div class="project-desc">Jeu en terminal vs IA</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
+            <a href="pdf/B1_TP_Shifumi_G2_Mory_Camille.pdf" target="_blank" class="cardActi-project">
+              <div class="project-icon">✊</div>
+              <div class="project-info">
+                <div class="project-name">Shifumi</div>
+                <div class="project-desc">Pierre-Feuille-Ciseaux</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="cardActi-footer">
+          <div class="cardActi-count">
+            <span>3</span> projets
+          </div>
+          <div class="cardActi-tech">
+            <div class="tech-dot java"><span>Java</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte Flutter -->
+      <div class="cardActi">
+        <div class="cardActi-header">
+          <div class="cardActi-icon">
+            <img src="img/Flutter.png" alt="Flutter" />
+          </div>
+          <div class="cardActi-title">
+            <h3>Développement Mobile</h3>
+            <span>Applications Flutter</span>
+          </div>
+        </div>
+        <div class="cardActi-content">
+          <div class="cardActi-projects">
+            <a href="pdf/AP-GSB-MORY-RUGGERI-SLAM.pdf" target="_blank" class="cardActi-project">
+              <div class="project-icon">📱</div>
+              <div class="project-info">
+                <div class="project-name">GSB APP</div>
+                <div class="project-desc">App mobile notes de frais</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
+            <a href="pdf/Nature'Emoi.pdf" target="_blank" class="cardActi-project">
+              <div class="project-icon">🌿</div>
+              <div class="project-info">
+                <div class="project-name">Nature'Emoi</div>
+                <div class="project-desc">Catalogue de plantes</div>
+              </div>
+              <span class="project-arrow">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="cardActi-footer">
+          <div class="cardActi-count">
+            <span>2</span> projets
+          </div>
+          <div class="cardActi-tech">
+            <div class="tech-dot flutter"><span>Flutter</span></div>
+            <div class="tech-dot dart"><span>Dart</span></div>
           </div>
         </div>
       </div>
