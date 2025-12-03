@@ -24,6 +24,70 @@ body {
 }
 
 /* ============================================
+   ICÔNES SVG PERSONNALISÉES
+   ============================================ */
+
+.icon-inline {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  display: inline-block;
+  margin-right: 4px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-btn {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.2em;
+  display: inline-block;
+  margin-right: 6px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-arrow {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  display: inline-block;
+  margin-left: 6px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.card-btn:hover .icon-arrow,
+.cardS-btn:hover .icon-arrow {
+  transform: translateX(4px);
+}
+
+.project-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.project-arrow svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+.cardActi-project:hover .project-arrow svg {
+  transform: translateX(5px);
+}
+
+/* ============================================
    HEADER
    ============================================ */
 
