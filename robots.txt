@@ -1,0 +1,10 @@
+# Robots.txt pour camille-mory.fr
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://camille-mory.fr/sitemap.xml
+
+# Fichiers à ne pas indexer
+Disallow: /pdf/
+

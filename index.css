@@ -633,10 +633,11 @@ div > p {
   padding-top: 15px;
 }
 
+a.cardS-btn,
 .cardS-btn {
   padding: 12px 24px;
   background: linear-gradient(135deg, #292767 0%, #3d3a8a 100%);
-  color: white;
+  color: white !important;
   border: none;
   border-radius: 25px;
   font-size: 0.9em;
@@ -997,7 +998,9 @@ body.dark-mode .cardS-title,
 body.dark-mode .skill-name { color: #fff; }
 
 body.dark-mode .card-description,
-body.dark-mode .card-descriptionS { color: rgba(255, 255, 255, 0.7); }
+body.dark-mode .card-descriptionS { color: rgba(255, 255, 255, 0.9); }
+
+body.dark-mode .card-description b { color: #7aa2f7; }
 
 body.dark-mode .cardS-meta span { color: rgba(255, 255, 255, 0.6); }
 
