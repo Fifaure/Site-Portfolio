@@ -1,3 +1,22 @@
+// ============================================
+// LOADER
+// ============================================
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  
+  if (loader) {
+    // Attendre un minimum de temps pour voir l'animation
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      
+      // Supprimer complètement le loader après l'animation
+      setTimeout(() => {
+        loader.remove();
+      }, 600);
+    }, 1500); // Durée minimum d'affichage du loader
+  }
+});
+
 // Menu hamburger
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
