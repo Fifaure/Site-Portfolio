@@ -80,34 +80,34 @@
 }
 
 /* ============================================
-   TITRES DE SECTION (transitions au scroll)
+   TITRES DE SECTION (transitions au scroll - par le haut)
    ============================================ */
 
 .animationTitle {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateY(-50px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .animationTitle.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 /* ============================================
-   CONTENU DE SECTION (transitions au scroll)
+   CONTENU DE SECTION (transitions au scroll - par le bas)
    ============================================ */
 
 .animationContent {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(50px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   transition-delay: 0.15s;
 }
 
 .animationContent.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 /* ============================================
@@ -228,8 +228,8 @@
 
 .timeline-item {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .animationContent.animate .timeline-item {
@@ -238,15 +238,15 @@
 }
 
 .animationContent.animate .timeline-item:nth-child(1) {
-  transition-delay: 0s;
+  transition-delay: 0.1s;
 }
 
 .animationContent.animate .timeline-item:nth-child(2) {
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }
 
 .animationContent.animate .timeline-item:nth-child(3) {
-  transition-delay: 0.4s;
+  transition-delay: 0.5s;
 }
 
 /* Animation du point timeline */

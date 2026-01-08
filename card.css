@@ -21,7 +21,7 @@
 .cardActi-header {
   position: relative;
   padding: 25px;
-  background: linear-gradient(135deg, #292767 0%, #4a4a9e 50%, #4a90e2 100%);
+  background: #4a4a9e;
   display: flex;
   align-items: center;
   gap: 20px;

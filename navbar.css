@@ -110,16 +110,18 @@ nav {
 /* Bouton CV spécial */
 .highContent a[href*="CV"],
 .highContentResponsive a[href*="CV"] {
-  background: linear-gradient(135deg, #292767 0%, #4a90e2 100%);
-  color: white !important;
+  background: white;
+  color: #1a1a1a !important;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .highContent a[href*="CV"]:hover,
 .highContentResponsive a[href*="CV"]:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+  background: #1a1a1a;
+  color: white !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .highContent a[href*="CV"]::before,

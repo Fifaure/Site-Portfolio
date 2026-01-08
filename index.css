@@ -650,38 +650,18 @@ div > p {
    LIGNES DE SÉPARATION
    ============================================ */
 
-.pair {
-  position: relative;
-}
-
-.pair::before,
-.pair::after {
+#qui::after,
+#skills::after,
+#parc::after,
+#stage::after {
   content: '';
   position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 800px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, #292767 20%, #4a90e2 50%, #292767 80%, transparent 100%);
-  border-radius: 2px;
-}
-
-.pair::before { top: 0; }
-.pair::after { bottom: 0; }
-
-#qui::before,
-#stage::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  max-width: 800px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #292767, #4a90e2, #292767, transparent);
-  border-radius: 2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #292767 20%, #4a90e2 40%, #4a90e2 60%, #292767 80%, transparent);
 }
 
 /* ============================================
@@ -867,8 +847,7 @@ div > p {
 }
 
 .timeline-card-header img {
-  max-width: 220px;
-  max-height: 180px;
+  width: 80%;
   object-fit: contain;
   filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.3));
   transition: transform 0.4s ease;
@@ -877,7 +856,7 @@ div > p {
 }
 
 .timeline-card:hover .timeline-card-header img {
-  transform: scale(1.1) rotate(-3deg);
+  transform: scale(1.2) rotate(-5deg);
 }
 
 
@@ -923,19 +902,23 @@ div > p {
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  background: linear-gradient(135deg, #292767 0%, #4a90e2 100%);
-  color: white;
+  background: rgba(240, 240, 250, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #292767;
   text-decoration: none;
   border-radius: 25px;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(41, 39, 103, 0.2);
+  box-shadow: 0 4px 20px rgba(41, 39, 103, 0.12);
+  border: 1px solid rgba(41, 39, 103, 0.1);
 }
 
 .timeline-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(41, 39, 103, 0.3);
+  background: rgba(230, 230, 245, 0.95);
+  box-shadow: 0 8px 30px rgba(41, 39, 103, 0.18);
 }
 
 .timeline-btn .icon-arrow {
@@ -1161,16 +1144,18 @@ div > p {
   margin-bottom: 20px;
   display: inline-block;
   padding: 12px 28px;
-  background: linear-gradient(135deg, #292767 0%, #3d3a8a 100%);
-  color: #fff;
-  border: none;
+  background: rgba(240, 240, 250, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #292767;
+  border: 1px solid rgba(41, 39, 103, 0.1);
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9em;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(41, 39, 103, 0.25);
+  box-shadow: 0 4px 20px rgba(41, 39, 103, 0.12);
   position: relative;
   overflow: hidden;
 }
@@ -1182,7 +1167,7 @@ div > p {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   transition: 0.5s;
 }
 
@@ -1191,9 +1176,9 @@ div > p {
 }
 
 .card-btn:hover {
-  background: linear-gradient(135deg, #1a1850 0%, #292767 100%);
+  background: rgba(230, 230, 245, 0.95);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(41, 39, 103, 0.35);
+  box-shadow: 0 8px 30px rgba(41, 39, 103, 0.18);
 }
 
 /* ============================================
@@ -1868,7 +1853,13 @@ body.dark-mode .timeline-info .icon-inline {
 }
 
 body.dark-mode .timeline-btn {
-  background: linear-gradient(135deg, #4a90e2 0%, #292767 100%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+body.dark-mode .timeline-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 body.dark-mode .card-badge,
@@ -1876,7 +1867,16 @@ body.dark-mode .cardS-badge {
   background: linear-gradient(135deg, #4a90e2, #292767);
 }
 
-body.dark-mode .card-btn,
+body.dark-mode .card-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+body.dark-mode .card-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 body.dark-mode .cardS-btn {
   background: linear-gradient(135deg, #4a90e2 0%, #292767 100%);
   color: white;
@@ -1893,12 +1893,13 @@ body.dark-mode .cardActi {
 }
 
 body.dark-mode .cardActi-project {
-  background: linear-gradient(135deg, #292767 0%, #1e1e2e 100%);
+  background: #292767;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .project-name { color: #fff; }
 body.dark-mode .project-desc { color: rgba(255, 255, 255, 0.6); }
+body.dark-mode .cardActi-project .project-arrow { color: #fff; }
 body.dark-mode .cardActi-footer { border-color: rgba(255, 255, 255, 0.1); }
 body.dark-mode .cardActi-count { color: rgba(255, 255, 255, 0.6); }
 
