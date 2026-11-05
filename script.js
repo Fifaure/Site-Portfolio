@@ -28,10 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
         menuItems.style.transform = 'translateY(0)';
         menuItems.style.opacity = '1';
         menuItems.style.visibility = 'visible';
+        menuItems.style.pointerEvents = 'auto';
       } else {
         menuItems.style.transform = 'translateY(-150%)';
         menuItems.style.opacity = '0';
         menuItems.style.visibility = 'hidden';
+        menuItems.style.pointerEvents = 'none';
       }
     });
   }
